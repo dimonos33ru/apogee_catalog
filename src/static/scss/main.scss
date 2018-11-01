@@ -1,0 +1,26 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+html {
+	font-size: 16px;
+}
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.75;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+}
+
+@import "media"; // Always at the end
