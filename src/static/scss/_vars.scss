@@ -1,6 +1,29 @@
 $default-font: "opensans", sans-serif;
-$accent: indigo;
+$accent: #5192cc;
 $text: #333;
+
+$color-primary-0: #1e5e98;	/* Основной Цвет */
+$color-primary-1: #2d5272;
+$color-primary-2: #0a3963;
+$color-primary-3: #5192cc;
+$color-primary-4: #72a1cc;
+
+$color-secondary-a-0: #ebba20;	/* Вторичный Цвет A */
+$color-secondary-a-1: #b0953e;
+$color-secondary-a-2: #99770a;
+$color-secondary-a-3: #f5cf56;
+$color-secondary-a-4: #f5d981;
+
+$color-secondary-b-0: #eb5f20;	/* Вторичный Цвет B */
+$color-secondary-b-1: #b0623e;
+$color-secondary-b-2: #99370a;
+$color-secondary-b-3: #f58856;
+$color-secondary-b-4: #f5a581;
+
+$primary-color-text:   #FFFFFF;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;

@@ -3,3 +3,5 @@
 
 @include font-face("opensans", "../fonts/OpenSansRegular/OpenSansRegular");
 @include font-face("opensans", "../fonts/OpenSansBold/OpenSansBold", bold);
+@include font-face("opensans", "../fonts/OpenSansLight/OpenSansLight", 300);
+@include font-face("opensans", "../fonts/OpenSansRegularItalic/OpenSansRegularItalic");

@@ -1,7 +1,22 @@
-.header
-	p Всем привет привет привет привет Здарова!!!!!!!!! 
-		strong How are you, men???
-	p.styl Hop Hop Hop
-	input(class="button", type="button", value="Входите")
-	input#data(type="datetime", name="data")
-	a.button(href="#") Hello
+header.header
+	.container
+		.row.align-items-center
+			.col-md-3
+				a(href="#")
+					img(src="img/logo.png", class="img-fluid", alt="Апогей")
+			.col-md-5.header-search
+				form(action="#")
+					input(type="search", placeholder="Найти...")
+					button(type="submit")
+						i.fas.fa-search
+			.col-md-3
+				.p-number
+					i.fas.fa-phone 
+					p +7 (495) 783-17-76	
+				.h-mail
+					i.fas.fa-envelope
+					p oooapogei@mail.ru
+			.col-md-1
+				.user
+					i.fas.fa-user-alt
+					i.fas.fa-caret-down

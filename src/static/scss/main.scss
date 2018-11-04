@@ -3,7 +3,7 @@
 @import "libs";
 
 ::placeholder {
-	color: #666;
+	color: $divider-color;
 }
 
 ::selection {
@@ -11,7 +11,7 @@
 	color: #fff;
 }
 html {
-	font-size: 16px;
+	font-size: 10px;
 }
 body {
 	font-size: 16px;
@@ -20,7 +20,11 @@ body {
 	line-height: 1.75;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: $text;
+	color: $text;	
 }
+
+// styles "Header"
+@import "fragments/header";
+
 
 @import "media"; // Always at the end
