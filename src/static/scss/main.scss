@@ -23,8 +23,12 @@ body {
 	color: $text;	
 }
 
+ul {margin: 0; padding: 0;}
+li {list-style: none; margin: 0; padding: 0; }
+
 // styles "Header"
 @import "fragments/header";
+@import "fragments/navigation";
 
 
 @import "media"; // Always at the end
