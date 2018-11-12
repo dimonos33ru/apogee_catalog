@@ -1,15 +1,19 @@
 .navigate-top {
 	background-color: $color-primary-0;
+	letter-spacing: 1px;
+	margin-bottom: 1rem;
 	a {
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 1em;
 		color: $primary-color-text;
-		padding: 1.7rem 0;
+		padding: 2rem 0;
 	}
 	.catalog_cap {
-		background-color: lighten($color: $color-primary-0, $amount: 6);
+		// background-color: lighten($color-primary-0, 8);
+		background-color: desaturate(lighten($color-primary-0, 11), 10);
+		// background-color: #457B9D;
 		li {
 			width: 100%;
 			a {
@@ -29,23 +33,25 @@
 	}
 	.menu {
 		display: flex;
+		justify-content: center;
 		li {
 			min-width: 20%;
 			a {
 				display: block;	
 				position: relative;
 				padding: {
-					left: 1.2rem;
-					right: 1.2rem;
-				}
+						left: 2rem;
+						right: 2rem;
+						}
 				text-align: center;
-				transition: background-color 0.6s ease;
+				transition: all 0.5s ease;
 				&::before {
 					content: '';
 					position: absolute;
 					height: 0px;
 					width: 100%;
-					background: lighten($color: $color-primary-0, $amount: 20);
+					background: lighten($accent, 3);
+					box-shadow: 0 1px 4px rgb(163, 163, 163);
 					left: 0;
 					bottom: 0;
 					transition: height 0.4s ease-in-out;
@@ -61,6 +67,7 @@
 		border-right: 2px solid rgba($color-primary-3, 0.2);
 		.shop_car {
 			margin-right: 1rem;
+			margin-top: 0.5rem;
 			transition: background-color 0.6s ease;
 			a {
 				position: relative;
@@ -80,7 +87,7 @@
 					position: absolute;
 					top: -0.5rem;
 					font-size: 0.9em;
-					background-color: desaturate($accent, 10);;
+					background-color: desaturate($accent, 10);
 					transition: background-color 0.5s ease;
 				}	
 			}
