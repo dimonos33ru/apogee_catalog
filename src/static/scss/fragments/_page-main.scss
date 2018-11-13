@@ -2,7 +2,6 @@
 	.product_list {
 		font-size: 1em;
 		font-weight: 700;
-		// padding-bottom: 1rem;
 		background-color: rgba($color-primary-4, 0.3);
 		li {	
 			a {
@@ -51,24 +50,30 @@
 	}
 }
 
+.breadcrumb {
+	a {
+		&:hover {
+			color: $accent;
+		}
+	}
+}
+
 .product_list-img {
-	a.card {
+	.card {
 		display: block;
 		text-decoration: none;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		transition: box-shadow 0.3s ease;
 		margin: 1.5rem 0;
-		position: relative;
 		background-color: rgba(201, 201, 201, 0.1);
-		z-index: 10;
 		img {
 			display: block;
 			margin: 0 auto;
+			height: 206px;
 			padding: 1.5rem 0;
 			width: auto;
 		}
 		.card-body {
-			// background-color: #F5F5F5;
 			position: relative;
 			&::before {
 				content: "";

@@ -15,6 +15,13 @@ section.wrepper-main
 						li
 							a(href="#")=val	
 			.col-md-9
+				.row
+					nav(aria-label="breadcrumb").col
+						ol(class="breadcrumb")
+							li(class="breadcrumb-item")
+								a(href="#")  Главная
+							li(class="breadcrumb-item active" aria-current="page") Каталог продукции
+							
 				.row.product_list-img
 					+card-product_list('#', 1, 'Клапаны пожарные')
 					+card-product_list('#', 2, 'Клапаны запорные')

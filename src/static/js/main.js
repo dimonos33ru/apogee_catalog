@@ -1,24 +1,14 @@
-$(document).ready(function () {
-	var list = ['Пожарные краны', 'Чугунные краны', 'Шайбы', 'Коллекторы',
-						'Латунные краны', 'Гайки', 'Прижимы', 'Стволы'];
+$(document).ready(function () { // end hover
 
-	list.forEach(function (item) {
-		$('.lists').append('<li><a href=#>' + item + '</a></li>');
-	})
-
-	$('#hello').dialog({
-		draggable: false,
-		resizable: false,
-		width: 600,
-		height: 400,
-		show: 400,
-		hide: {
-			effect: 'explode',
-			delay: 250,
-			duration: 1000,
-			easing: 'easeInQuad'
+	$('.user').hover(
+		function () {
+			clearTimeout($.data(this, 'timer'));
+			$('.dropdown-menu', this).stop().slideDown(200);
 		},
-		position: 'center'
-	});
+		function () {
+			$.data(this, 'timer', setTimeout($.proxy(function () {
+				$('.dropdown-menu', this).stop().slideUp(200);
+			}, this), 600));
+		});
 
 }); // end ready
