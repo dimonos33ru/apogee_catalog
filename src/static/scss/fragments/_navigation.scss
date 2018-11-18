@@ -10,25 +10,32 @@
 		color: $primary-color-text;
 		padding: 2rem 0;
 	}
-	.catalog_cap {
-		// background-color: lighten($color-primary-0, 8);
-		background-color: desaturate(lighten($color-primary-0, 11), 10);
-		// background-color: #457B9D;
-		li {
-			width: 100%;
-			a {
-				display: block;
-				position: relative;
-				padding-left: 1.5rem;
-				border-left: 2px solid rgba($color-primary-3, 0.2);
-				border-right: 2px solid rgba($color-primary-3, 0.2);
-				&::after {
-					font-family: "Font Awesome 5 Free";
-					content: "\f07c";
-					position: absolute;
-					right: 1.5rem;
-				}
+
+	.catalog {
+		position: relative;
+		.catalog_name, .catalog_name2 {
+			display: block;
+			position: relative;
+			padding-left: 1.5rem;
+			border-left: 2px solid rgba($color-primary-3, 0.2);
+			border-right: 2px solid rgba($color-primary-3, 0.2);
+			background-color: desaturate(lighten($color-primary-0, 11), 10);
+			&::after {
+				font-family: "Font Awesome 5 Free";
+				font-weight: normal;
+				content: "\f07b";
+				position: absolute;
+				right: 1.5rem;
+				transition: all 0.5s ease;
 			}
+			// &:hover::after {
+			// 	font-family: "Font Awesome 5 Free";
+			// 	content: "\f07c";
+			// }
+		}
+		.catalog_name2::after {
+			font-family: "Font Awesome 5 Free";
+			content: "\f07c";
 		}
 	}
 	.menu {
@@ -90,6 +97,42 @@
 					background-color: desaturate($accent, 10);
 					transition: background-color 0.5s ease;
 				}	
+			}
+		}
+	}
+}
+
+.mega_menu {
+	position: absolute;
+	display: none;
+	padding: 1.5rem 0.5rem;
+	left: 0;
+	width: 400%;
+	height: auto;
+	background-color: desaturate(lighten($color-primary-0, 11), 10);
+	border-top: none;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	z-index: 100;
+	.mega_menu-list {
+		height: inherit;
+		display: flex;
+		flex-flow: row wrap;
+		align-content: space-around;
+		>li {
+			width: 250px;
+			margin: 0 10px;
+			.mega_menu-items {
+				display: block;
+				text-transform: none;
+				font-size: 1em;
+				padding: 5px;
+				font-weight: normal;
+				color: #fff;
+				border-radius: 3px;
+				transition: background-color 0.3s ease;
+				&:hover {
+					background-color: $color-primary-0;
+				}
 			}
 		}
 	}

@@ -1,10 +1,15 @@
 nav.navigate-top
 	.container
 		.row.no-gutters
-			.col-md-3.catalog_cap
-				ul
+			.col-md-3
+				ul.catalog
 					li
-						a(href="#") Каталог продукции 
+						a(href="#").catalog_name Каталог продукции 
+						.mega_menu
+							ul.mega_menu-list
+								each val in ['Клапаны пожарные', 'Клапаны запорные', 'Клапаны обратные', 'Штуцера', 'Гайка', 'Заглушки', 'Коллекторы', 'Краны', 'Головки соединительные пожарные', 'Стволы пожарные']
+									li
+										a(href="#").mega_menu-items=val	
 			.col-md-8
 				ul.menu
 					li 

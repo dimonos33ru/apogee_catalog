@@ -1,0 +1,47 @@
+footer {
+	.footer-top {
+		position: relative;
+		margin-top: 10rem;
+		margin-bottom: -4px;
+	}
+	.footer-down {
+		background-color: #5192CC;
+		padding: 3.2rem 0;
+		.copyrighted {
+			padding: 0.7rem 1.5rem;
+			color: #cecece;
+			font-size: 0.8125em;
+			line-height: 1.3em;
+		}
+		.footer-menu {
+			>ul li {
+				margin-bottom: 1rem;
+				transition: transform 0.2s ease;
+				&:last-child {
+					margin: 0;
+				}
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					content: "\f105";
+					font-size: .9375em;
+					color: white;
+					font-weight: 900;
+				}
+				&:hover {
+					transform: translateY(-2px);
+				}
+				a {
+					display: inline-block;
+					color: white;
+					font-weight: 400;
+					font-size: .9375em;
+					padding: 0 1.5rem;
+					text-decoration: none;
+					&:hover {
+						border-bottom: 1px dashed white;
+					}
+				}			
+			} 
+		}
+	}
+}

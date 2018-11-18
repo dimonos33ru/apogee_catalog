@@ -1,15 +1,6 @@
 .wrepper-main {
-	.breadcrumb {
-		background-color: rgba(#72a1cc, 0.2);
-		a {
-			&:hover {
-				color: $accent;
-			}
-		}
-	}
-	
-	//Карточки категроий
-	.product_list-img {
+	//Карточки товаров
+	.product_item-img {
 		.card {
 			display: block;
 			text-decoration: none;

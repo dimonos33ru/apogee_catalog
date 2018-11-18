@@ -1,0 +1,29 @@
+mixin card-product_item(href,img,name)
+	.col-lg-3.col-md-4.card-deck
+		a(href=href).card
+			img(src="img/product_items/img"+img+".png", alt=name).card-img-top
+			.card-body
+				.card-title= name
+
+
+section.wrepper-main
+	.container
+		.row
+			.col
+				nav(aria-label="breadcrumb")
+					ol(class="breadcrumb")
+						li(class="breadcrumb-item") <a href="#">Главная</a>
+						li(class="breadcrumb-item") <a href="#">Каталог продукции</a>
+						li(class="breadcrumb-item active" aria-current="page") Клапаны пожарные
+							
+		.row.product_item-img
+			+card-product_item('#', 1, 'Клапаны пожарные')
+			+card-product_item('#', 2, 'Клапаны запорные')
+			+card-product_item('#', 3, 'Клапаны обратные')
+			+card-product_item('#', 4, 'Штуцера')
+			+card-product_item('#', 5, 'Гайка')
+			+card-product_item('#', 6, 'Заглушки')
+			+card-product_item('#', 7, 'Коллекторы')
+			+card-product_item('#', 8, 'Краны')
+			+card-product_item('#', 9, 'Головки соединительные пожарные')
+			+card-product_item('#', 10, 'Стволы пожарные')
