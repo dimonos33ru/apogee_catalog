@@ -3084,7 +3084,8 @@ body {
         display: block;
         text-transform: none;
         font-size: 1em;
-        padding: 5px;
+        padding: 1rem;
+        padding-left: 1.5rem;
         font-weight: normal;
         color: #fff;
         -webkit-border-radius: 3px;
@@ -3158,36 +3159,68 @@ body {
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   margin: 1.5rem 0;
   background-color: rgba(248, 248, 248, 0.85); }
-  .wrepper-main .product_item-img .card img {
-    display: block;
-    margin: 0 auto;
-    height: 206px;
-    padding: 1.5rem 0;
-    width: auto; }
-  .wrepper-main .product_item-img .card .card-body {
-    position: relative; }
-    .wrepper-main .product_item-img .card .card-body::before {
+  .wrepper-main .product_item-img .card .card-img-top {
+    position: relative;
+    overflow: hidden; }
+    .wrepper-main .product_item-img .card .card-img-top::before {
       content: "";
       position: absolute;
       width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease;
+      -o-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+    .wrepper-main .product_item-img .card .card-img-top img {
+      display: block;
+      margin: 0 auto;
+      height: 206px;
+      padding: 1.5rem 0;
+      width: auto; }
+    .wrepper-main .product_item-img .card .card-img-top .actions {
+      position: absolute;
+      width: 100%;
       left: 0;
-      top: 0;
-      border: 0;
-      height: 1px;
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(117, 117, 117, 0)), color-stop(rgba(117, 117, 117, 0.75)), to(rgba(117, 117, 117, 0)));
-      background-image: -webkit-linear-gradient(left, rgba(117, 117, 117, 0), rgba(117, 117, 117, 0.75), rgba(117, 117, 117, 0));
-      background-image: -o-linear-gradient(left, rgba(117, 117, 117, 0), rgba(117, 117, 117, 0.75), rgba(117, 117, 117, 0));
-      background-image: linear-gradient(to right, rgba(117, 117, 117, 0), rgba(117, 117, 117, 0.75), rgba(117, 117, 117, 0)); }
+      bottom: -25%;
+      -webkit-transition: .3s linear;
+      -o-transition: .3s linear;
+      transition: .3s linear; }
+      .wrepper-main .product_item-img .card .card-img-top .actions a {
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 1rem;
+        font-size: 0.9em;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(59, 62, 67, 0.75);
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease; }
+        .wrepper-main .product_item-img .card .card-img-top .actions a:hover {
+          background-color: #eb5f20; }
+        .wrepper-main .product_item-img .card .card-img-top .actions a::before {
+          font-family: "Font Awesome 5 Free";
+          font-size: 1.1em;
+          padding-right: 0.5em; }
+      .wrepper-main .product_item-img .card .card-img-top .actions .add-cart::before {
+        content: "\f217";
+        font-weight: 900; }
+      .wrepper-main .product_item-img .card .card-img-top .actions .view-item::before {
+        content: "\f06e"; }
+  .wrepper-main .product_item-img .card .card-body {
+    position: relative; }
     .wrepper-main .product_item-img .card .card-body .card-title {
       text-align: center;
-      font-size: 1.2em;
-      text-transform: uppercase;
+      font-size: 1em;
       color: #0055a3;
       margin-bottom: 0; }
-  .wrepper-main .product_item-img .card:hover {
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
-    background-color: #fff; }
+  .wrepper-main .product_item-img .card:hover .actions {
+    bottom: 0; }
+  .wrepper-main .product_item-img .card:hover .card-img-top::before {
+    opacity: 1; }
 
 .wrepper-main .product_item-img .card-deck {
   margin: 0; }
@@ -3233,6 +3266,32 @@ footer .footer-down {
       text-decoration: none; }
       footer .footer-down .footer-menu > ul li a:hover {
         border-bottom: 1px dashed white; }
+
+.top {
+  position: fixed;
+  right: -10rem;
+  bottom: 5rem;
+  background-color: #e0e0e0;
+  color: #707070;
+  opacity: 0.8;
+  z-index: 20;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  font-size: 2em;
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .top:hover {
+    background-color: #eb5f20;
+    color: #fff;
+    -webkit-box-shadow: 0 0 5px 0px #fff;
+    box-shadow: 0 0 5px 0px #fff;
+    opacity: 1; }
 
 /* Основной Цвет */
 /* Вторичный Цвет A */
