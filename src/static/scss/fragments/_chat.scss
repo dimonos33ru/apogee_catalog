@@ -1,0 +1,67 @@
+.chat_wrepper {
+	// position: fixed;
+	display: block;
+}
+
+.chat {
+	background: #fff;
+	font: normal 13px Tahoma,Arial,Helvetica,sans-serif;
+	right: 100px;
+	bottom: 0;
+	width: 200px;
+	box-shadow: 0 0 7px 0 #d0d0d0;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 100;
+	&__head {
+		height: 50px;
+		border: 1px solid #babfc2;
+		border-radius: 5px 5px 0 0;
+		box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
+		background: linear-gradient(top, #eeeeee, #dfdfdf);
+		&-caption {
+			text-align: center;
+			line-height: 50px;
+			font-size: 1.3em;
+			font-weight: bold;
+			background-color: #666666;
+			background-clip: text;
+			color: transparent;
+			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+		}
+	}
+	&__body {
+		height: 200px;
+		background-color: #fff;
+		overflow-x: hidden;
+		border-width: 1px;
+    border-style: solid;
+		border-color: #babfc2 #e7e7e7;
+		&__contact {
+			padding: 1rem 0 1rem 1.5rem;
+			color: $color-primary-5;
+			cursor: pointer;
+			white-space: nowrap;
+			display: flex;
+			align-items: center;
+			&:hover {
+				background-color: #e7f0f7;
+			}
+			&-icon {
+				font-size: 0.8em;
+				color: #2BB465;
+			}
+			&-name {
+				padding-left: 0.7rem;
+				font-size: 1.1em;
+			}
+		}
+	}
+	&__footer {
+		height: 30px;
+		background-color: #eeeeee;
+    border: 1px solid #babfc2;
+    border-width: 0 1px 1px;
+	}
+}

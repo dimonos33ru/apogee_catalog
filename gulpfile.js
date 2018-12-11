@@ -36,6 +36,5 @@ $.gulp.task('default', $.gulp.series(
 // задача для финальной версии
 $.gulp.task('build', $.gulp.series(
 	'cleanBuild',
-	$.gulp.parallel('pug:build', 'scss:build','js:build'),
-	$.gulp.parallel('server:build')
+	$.gulp.parallel('pug:build', 'scss:build','js:build','font','img')
 ));

@@ -30,14 +30,15 @@ body {
 	p  {margin: 0;}
 }
 
-
-
 // styles "Header"
 @import "fragments/header";
 @import "fragments/navigation";
 @import "fragments/page-main";
 @import "fragments/page-product";
+@import "fragments/page-detail";
 @import "fragments/footer";
+@import "fragments/chat";
+@import "fragments/top_arrow";
 
 
 @import "media"; // Always at the end

@@ -10,7 +10,7 @@ mixin card-product_item(href,img,name)
 				.card-title= name
 
 
-section.wrepper-main
+section.wrepper-product_Item
 	.container
 		.row
 			.col
@@ -21,7 +21,7 @@ section.wrepper-main
 						li(class="breadcrumb-item active" aria-current="page") Клапаны пожарные
 							
 		.row.product_item-img
-			+card-product_item('#', 1, 'Клапан КПЛ 50-1')
+			+card-product_item('page-productDetail.html', 1, 'Клапан КПЛ 50-1')
 			+card-product_item('#', 1, 'Клапан КПЛ 50-2')
 			+card-product_item('#', 1, 'Клапан КПЛ 65-1')
 			+card-product_item('#', 1, 'Клапан КПЛ 65-2')
