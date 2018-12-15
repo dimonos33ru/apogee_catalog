@@ -3822,6 +3822,34 @@ footer .footer-down {
     box-shadow: 0 0 5px 0px #fff;
     opacity: 1; }
 
+.pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.3em;
+  margin-top: 2rem; }
+  .pagination .page-link {
+    font-family: Verdana,sans-serif;
+    color: #333;
+    padding: .5rem 1rem; }
+    .pagination .page-link:hover {
+      text-decoration: none;
+      background-color: #e9ecef;
+      color: #eb5f20; }
+  .pagination__active .page-link {
+    background-color: #eb5f20;
+    color: #fff;
+    pointer-events: none; }
+  .pagination__disabled .page-link {
+    color: #BDBDBD;
+    pointer-events: none;
+    cursor: auto; }
+
 /* Основной Цвет */
 /* Вторичный Цвет A */
 /* Вторичный Цвет B */
