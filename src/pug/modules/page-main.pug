@@ -1,3 +1,4 @@
+//- миксин для карточек категорий
 mixin card-product_list(href,img,name)
 	.col-lg-3.col-md-4.card-deck
 		a(href=href).card
@@ -5,8 +6,8 @@ mixin card-product_list(href,img,name)
 			.card-body
 				.card-title= name
 
-
-section.wrepper-main
+// Навигация "Хлебные крошки"
+nav.navigate-breadcrumb
 	.container
 		.row
 			.col
@@ -15,7 +16,10 @@ section.wrepper-main
 						li(class="breadcrumb-item")
 							a(href="#")  Главная
 						li(class="breadcrumb-item active" aria-current="page") Каталог продукции
-							
+
+// Главные категории
+section.wrepper-main
+	.container
 		.row.product_list-img
 			+card-product_list('page-productsItem.html', 1, 'Клапаны пожарные')
 			+card-product_list('#', 2, 'Клапаны запорные')

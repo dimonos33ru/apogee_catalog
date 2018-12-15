@@ -1,22 +1,54 @@
+// Окно чата
 .chat_wrepper
 	.chat
 		.chat__head
 			.chat__head-caption Чат @Апогей
 		.chat__body
 			.chat__body__contact
-				span(title="Онлайн").chat__body__contact-icon <i class="fas fa-circle"></i>
+				span(title="Онлайн").chat__body__contact-status <i class="fas fa-circle"></i>
 				span(title="Разработчик").chat__body__contact-name Админ
 			.chat__body__contact
-				span(title="Онлайн").chat__body__contact-icon <i class="fas fa-circle"></i>
+				span(title="Онлайн").chat__body__contact-status <i class="fas fa-circle"></i>
 				span(title="Конструктор").chat__body__contact-name Мартынов Андрей
 			.chat__body__contact
-				span(title="Был сегодня в 14:55").chat__body__contact-icon <i style="color:#fb6262" class="fas fa-circle"></i>
+				span(title="Был сегодня в 14:55").chat__body__contact-status <i style="color:#fb6262" class="fas fa-circle"></i>
 				span(title="Технолог").chat__body__contact-name Дмитрий Викторович
 			.chat__body__contact
-				span(title="Был сегодня в 12:00").chat__body__contact-icon <i style="color:#fb6262" class="fas fa-circle"></i>
+				span(title="Был сегодня в 12:00").chat__body__contact-status <i style="color:#fb6262" class="fas fa-circle"></i>
 				span(title="Директор производства").chat__body__contact-name Пялин Сергей
 			.chat__body__contact
-				span(title="Был сегодня в 9:30").chat__body__contact-icon <i style="color:#fb6262" class="fas fa-circle"></i>
+				span(title="Был сегодня в 9:30").chat__body__contact-status <i style="color:#fb6262" class="fas fa-circle"></i>
 				span(title="Технолог").chat__body__contact-name Юля
 		.chat__footer
-		
+
+	.dialog
+		.dialog__head
+			.dialog__head__name
+				span.dialog__head__name-status <i class="fas fa-circle"></i>
+				span.dialog__head__name-lable Мартынов Андрей
+			.dialog__head__close
+				span X
+		.dialog__body
+			.dialog__body__message
+				.dialog__body__message__info
+					.dialog__body__message__info-from
+						span Админ
+					.dialog__body__message__info-datetime
+						span.date Сегодня
+						span.time 12:03
+				.dialog__body__message__textblock
+					span Привет! Как дела?
+			.dialog__body__message
+				.dialog__body__message__info.message-in
+					.dialog__body__message__info-from
+						span Мартынов Андрей
+					.dialog__body__message__info-datetime
+						span.date Сегодня
+						span.time 12:05
+				.dialog__body__message__textblock.textblock-in
+					span Привет! Взял мачтера на т-44))
+		.dialog__footer
+			form(action="#" method="").dialog__footer-input
+					textarea#input(name="messege", cols="36", rows="1")
+					button(type="submit")
+						i.fas.fa-arrow-left

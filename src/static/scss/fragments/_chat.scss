@@ -1,11 +1,11 @@
 .chat_wrepper {
-	// position: fixed;
 	display: block;
+	font: normal 0.8em Tahoma,Arial,Helvetica,sans-serif;
+	z-index: 100;
 }
 
 .chat {
 	background: #fff;
-	font: normal 13px Tahoma,Arial,Helvetica,sans-serif;
 	right: 100px;
 	bottom: 0;
 	width: 200px;
@@ -13,13 +13,12 @@
 	border-radius: 5px 5px 0 0;
 	overflow: hidden;
 	position: fixed;
-	z-index: 100;
 	&__head {
 		height: 50px;
 		border: 1px solid #babfc2;
 		border-radius: 5px 5px 0 0;
 		box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
-		background: linear-gradient(top, #eeeeee, #dfdfdf);
+		background: linear-gradient(to bottom, #f7f7f7, #dfdfdf);
 		&-caption {
 			text-align: center;
 			line-height: 50px;
@@ -32,14 +31,14 @@
 		}
 	}
 	&__body {
-		height: 200px;
+		height: calc(37 * 6px);
 		background-color: #fff;
 		overflow-x: hidden;
 		border-width: 1px;
     border-style: solid;
 		border-color: #babfc2 #e7e7e7;
 		&__contact {
-			padding: 1rem 0 1rem 1.5rem;
+			padding: 0.7rem 0 0.7rem 1.5rem;
 			color: $color-primary-5;
 			cursor: pointer;
 			white-space: nowrap;
@@ -48,7 +47,7 @@
 			&:hover {
 				background-color: #e7f0f7;
 			}
-			&-icon {
+			&-status {
 				font-size: 0.8em;
 				color: #2BB465;
 			}
@@ -65,3 +64,106 @@
     border-width: 0 1px 1px;
 	}
 }
+
+.dialog {
+	background: #fff;
+	right: 320px;
+	bottom: 0;
+	width: 300px;
+	box-shadow: 0 0 7px 0 #d0d0d0;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	position: fixed;
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 1rem;
+		height: 40px;
+		border: 1px solid #babfc2;
+		border-radius: 5px 5px 0 0;
+		box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
+		background: linear-gradient(to bottom, #f7f7f7, #dfdfdf);
+		&__name {
+			&-status {
+				font-size: 0.8em;
+				color: #2BB465;
+			}
+			&-lable {
+				font-weight: bold;
+				padding-left: 1rem;
+			}
+		}
+		&__close {
+			cursor: pointer;
+			padding: 0 0.5rem;
+		}
+	}
+	&__body {
+		height: 229px;
+		background-color: #fff;
+		overflow-x: hidden;
+		border-width: 1px;
+    border-style: solid;
+		border-color: #babfc2 #e7e7e7;
+		&__message {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem 1.5rem;
+			&__info {
+				display: flex;
+				justify-content: space-between;
+				&-from {
+					font-weight: bold;
+					color: #718fa3;
+				}
+				&-datetime {
+					font-size: 0.8em;
+					color: $divider-color;
+					.date {
+						padding-right: 0.5rem;
+					}
+				}
+			}
+			&__textblock {
+				
+			}
+		}
+	}
+	&__footer {
+		// height: 50px;
+		background-color: #eeeeee;
+    border: 1px solid #babfc2;
+		border-width: 0 1px 1px;
+		&-input {
+			display: flex;
+			align-items: center;
+			textarea {
+				margin: 0.5rem 0 0.5rem 0.5rem;
+				resize: none;
+			 }
+			button {
+				height: 100%;
+				width: 50px;
+				cursor: pointer;
+			}
+			.fa-arrow-left {
+				font-size: 1.1em;
+				background-color: #1e5e98;
+				background-clip: text;
+				color: transparent;
+				text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+			}
+		}
+	}
+}
+
+.message-in {
+	flex-direction: row-reverse;
+}
+.textblock-in {
+	align-self: flex-end;
+}
+// .message-out {
+// 	flex-direction: row;
+// }

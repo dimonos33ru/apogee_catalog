@@ -3606,11 +3606,12 @@ footer .footer-down {
         border-bottom: 1px dashed white; }
 
 .chat_wrepper {
-  display: block; }
+  display: block;
+  font: normal 0.8em Tahoma,Arial,Helvetica,sans-serif;
+  z-index: 100; }
 
 .chat {
   background: #fff;
-  font: normal 13px Tahoma,Arial,Helvetica,sans-serif;
   right: 100px;
   bottom: 0;
   width: 200px;
@@ -3619,8 +3620,7 @@ footer .footer-down {
   -webkit-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
-  position: fixed;
-  z-index: 100; }
+  position: fixed; }
   .chat__head {
     height: 50px;
     border: 1px solid #babfc2;
@@ -3628,10 +3628,10 @@ footer .footer-down {
     border-radius: 5px 5px 0 0;
     -webkit-box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
     box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dfdfdf));
-    background: -webkit-linear-gradient(top, #eeeeee, #dfdfdf);
-    background: -o-linear-gradient(top, #eeeeee, #dfdfdf);
-    background: linear-gradient(top, #eeeeee, #dfdfdf); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#dfdfdf));
+    background: -webkit-linear-gradient(top, #f7f7f7, #dfdfdf);
+    background: -o-linear-gradient(top, #f7f7f7, #dfdfdf);
+    background: linear-gradient(to bottom, #f7f7f7, #dfdfdf); }
     .chat__head-caption {
       text-align: center;
       line-height: 50px;
@@ -3643,14 +3643,15 @@ footer .footer-down {
       color: transparent;
       text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px; }
   .chat__body {
-    height: 200px;
+    height: -webkit-calc(37 * 6px);
+    height: calc(37 * 6px);
     background-color: #fff;
     overflow-x: hidden;
     border-width: 1px;
     border-style: solid;
     border-color: #babfc2 #e7e7e7; }
     .chat__body__contact {
-      padding: 1rem 0 1rem 1.5rem;
+      padding: 0.7rem 0 0.7rem 1.5rem;
       color: #457B9D;
       cursor: pointer;
       white-space: nowrap;
@@ -3664,7 +3665,7 @@ footer .footer-down {
       align-items: center; }
       .chat__body__contact:hover {
         background-color: #e7f0f7; }
-      .chat__body__contact-icon {
+      .chat__body__contact-status {
         font-size: 0.8em;
         color: #2BB465; }
       .chat__body__contact-name {
@@ -3675,6 +3676,125 @@ footer .footer-down {
     background-color: #eeeeee;
     border: 1px solid #babfc2;
     border-width: 0 1px 1px; }
+
+.dialog {
+  background: #fff;
+  right: 320px;
+  bottom: 0;
+  width: 300px;
+  -webkit-box-shadow: 0 0 7px 0 #d0d0d0;
+  box-shadow: 0 0 7px 0 #d0d0d0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  position: fixed; }
+  .dialog__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 40px;
+    border: 1px solid #babfc2;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
+    box-shadow: inset 0 1px 0 0 #fff, inset 0 -1px 0 0 #e7e7e7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#dfdfdf));
+    background: -webkit-linear-gradient(top, #f7f7f7, #dfdfdf);
+    background: -o-linear-gradient(top, #f7f7f7, #dfdfdf);
+    background: linear-gradient(to bottom, #f7f7f7, #dfdfdf); }
+    .dialog__head__name-status {
+      font-size: 0.8em;
+      color: #2BB465; }
+    .dialog__head__name-lable {
+      font-weight: bold;
+      padding-left: 1rem; }
+    .dialog__head__close {
+      cursor: pointer;
+      padding: 0 0.5rem; }
+  .dialog__body {
+    height: 229px;
+    background-color: #fff;
+    overflow-x: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #babfc2 #e7e7e7; }
+    .dialog__body__message {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 1rem 1.5rem; }
+      .dialog__body__message__info {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .dialog__body__message__info-from {
+          font-weight: bold;
+          color: #718fa3; }
+        .dialog__body__message__info-datetime {
+          font-size: 0.8em;
+          color: #BDBDBD; }
+          .dialog__body__message__info-datetime .date {
+            padding-right: 0.5rem; }
+  .dialog__footer {
+    background-color: #eeeeee;
+    border: 1px solid #babfc2;
+    border-width: 0 1px 1px; }
+    .dialog__footer-input {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .dialog__footer-input textarea {
+        margin: 0.5rem 0 0.5rem 0.5rem;
+        resize: none; }
+      .dialog__footer-input button {
+        height: 100%;
+        width: 50px;
+        cursor: pointer; }
+      .dialog__footer-input .fa-arrow-left {
+        font-size: 1.1em;
+        background-color: #1e5e98;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px; }
+
+.message-in {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+
+.textblock-in {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
 
 .top_arrow {
   position: fixed;

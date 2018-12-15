@@ -9,8 +9,8 @@ mixin card-product_item(href,img,name)
 			.card-body
 				.card-title= name
 
-
-section.wrepper-product_Item
+// Навигация "Хлебные крошки"
+nav.navigate-breadcrumb
 	.container
 		.row
 			.col
@@ -19,7 +19,10 @@ section.wrepper-product_Item
 						li(class="breadcrumb-item") <a href="#">Главная</a>
 						li(class="breadcrumb-item") <a href="#">Каталог продукции</a>
 						li(class="breadcrumb-item active" aria-current="page") Клапаны пожарные
-							
+
+// Подкатегории
+section.wrepper-product_Item
+	.container
 		.row.product_item-img
 			+card-product_item('page-productDetail.html', 1, 'Клапан КПЛ 50-1')
 			+card-product_item('#', 1, 'Клапан КПЛ 50-2')
