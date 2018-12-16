@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Подробнее</title>
@@ -249,6 +249,52 @@
         </div>
       </div>
     </footer>
+    <!-- Стрелка вверх-->
+    <div class="top_arrow"><i class="fas fa-angle-up" title='Наверх'></i></div>
+    <!-- Окно чата-->
+    <div class="chat_wrepper">
+      <div class="chat">
+        <div class="chat__head">
+          <div class="chat__head-caption">Чат @Апогей</div>
+        </div>
+        <div class="chat__body">
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Разработчик">Админ</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Конструктор">Мартынов Андрей</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 14:55"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Дмитрий Викторович</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 12:00"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Директор производства">Пялин Сергей</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 9:30"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Юля</span></div>
+        </div>
+        <div class="chat__footer"></div>
+      </div>
+      <div class="dialog">
+        <div class="dialog__head">
+          <div class="dialog__head__name"><span class="dialog__head__name-status"><i class="fas fa-circle"></i></span><span class="dialog__head__name-lable">Мартынов Андрей</span></div>
+          <div class="dialog__head__close"><span>X</span></div>
+        </div>
+        <div class="dialog__body">
+          <div class="dialog__body__message">
+            <div class="dialog__body__message__info">
+              <div class="dialog__body__message__info-from"><span>Админ</span></div>
+              <div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:03</span></div>
+            </div>
+            <div class="dialog__body__message__textblock"><span>Привет! Как дела?</span></div>
+          </div>
+          <div class="dialog__body__message">
+            <div class="dialog__body__message__info message-in">
+              <div class="dialog__body__message__info-from"><span>Мартынов Андрей</span></div>
+              <div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:05</span></div>
+            </div>
+            <div class="dialog__body__message__textblock textblock-in"><span>Привет! Взял мачтера на т-44))</span></div>
+          </div>
+        </div>
+        <div class="dialog__footer">
+          <form class="dialog__footer-input" action="#" method="">
+            <textarea id="input" name="messege" cols="36" rows="1"></textarea>
+            <button type="submit"><i class="fas fa-arrow-left"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

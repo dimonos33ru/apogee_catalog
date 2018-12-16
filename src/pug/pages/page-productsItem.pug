@@ -1,18 +1,8 @@
-doctype html
+extends ../layout/template
 
-- var title = 'Каталог продукции'
+block title
+	- var title = 'Каталог продукции'
 
-html(lang="ru-RU")
-
-	head
-		include ../modules/head
-	
-	body
-		include ../modules/header
-		include ../modules/navigation
-		include ../modules/page-product
-		include ../modules/nav/pagination
-		include ../modules/footer
-
-
-		script(src="js/scripts.min.js")
+block content
+	include ../modules/page-product
+	include ../modules/nav/pagination

@@ -1,17 +1,7 @@
-doctype html
+extends ../layout/template
 
-- var title = 'Подробнее'
+block title
+	- var title = 'Подробнее'
 
-html(lang="ru-RU")
-
-	head
-		include ../modules/head
-	
-	body
-		include ../modules/header
-		include ../modules/navigation
-		include ../modules/page-detail
-		include ../modules/footer
-
-
-		script(src="js/scripts.min.js")
+block content
+	include ../modules/page-detail
