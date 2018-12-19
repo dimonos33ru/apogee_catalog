@@ -1,6 +1,9 @@
-mixin card-product_item(href,img,name)
+mixin card-product_item(href,img,name,artNow,artOld)
 	.col-lg-3.col-md-4.card-deck
 		.card
+			.card-header.articul
+				.articul-now Артикул: 5050844
+				.articul-old Стар. арт.: 50104848
 			.card-img-top
 				img(src="img/product_items/img"+img+".png", alt=name)
 				.actions
@@ -27,17 +30,17 @@ section.wrepper-product_Item
 			+card-product_item('page-productDetail.html', 1, 'Клапан КПЛ 50-1')
 			+card-product_item('#', 1, 'Клапан КПЛ 50-2')
 			+card-product_item('#', 1, 'Клапан КПЛ 65-1')
-			+card-product_item('#', 1, 'Клапан КПЛ 65-2')
-			+card-product_item('#', 1, 'Клапан КПЛМ 50-1')
-			+card-product_item('#', 1, 'Клапан КПЛМ 50-2')
+			+card-product_item('#', 2, 'Клапан КПЛ 65-2')
+			+card-product_item('#', 2, 'Клапан КПЛМ 50-1')
+			+card-product_item('#', 2, 'Клапан КПЛМ 50-2')
 			+card-product_item('#', 1, 'Клапан КПЛМ 65-2')
-			+card-product_item('#', 1, 'Клапан КПЛП 50')
-			+card-product_item('#', 1, 'Клапан КПЛП 65')
-			+card-product_item('#', 1, 'Клапан КПЧ 50-1')
-			+card-product_item('#', 1, 'Клапан КПЧ 50-2')
-			+card-product_item('#', 1, 'Клапан КПЧ 65-1')
-			+card-product_item('#', 1, 'Клапан КПЧ 65-2')
+			+card-product_item('#', 4, 'Клапан КПЛП 50')
+			+card-product_item('#', 6, 'Клапан КПЛП 65')
+			+card-product_item('#', 2, 'Клапан КПЧ 50-1')
+			+card-product_item('#', 3, 'Клапан КПЧ 50-2')
+			+card-product_item('#', 7, 'Клапан КПЧ 65-1')
+			+card-product_item('#', 4, 'Клапан КПЧ 65-2')
 			+card-product_item('#', 1, 'Клапан КПЧМ 50-1')
 			+card-product_item('#', 1, 'Клапан КПЧМ 65-1')
-			+card-product_item('#', 1, 'Клапан КПАЛ 50-1')
+			+card-product_item('#', 3, 'Клапан КПАЛ 50-1')
 			+card-product_item('#', 1, 'Клапан КПАЛ 65-1')

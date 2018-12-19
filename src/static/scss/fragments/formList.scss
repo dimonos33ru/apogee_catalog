@@ -1,0 +1,59 @@
+.form-wrepper {
+	background-color: #fff;
+}
+
+.formProduct {
+	margin-top: 1.5rem;
+	font-size: 0.9em;
+	table {
+		text-align: center;
+	}
+	th {
+		vertical-align: top;
+		white-space: nowrap;
+	}
+}
+
+.form-group {
+	>label:not(:first-child) {
+		padding-top: 1rem;
+	}
+}
+
+.custom-select {
+	height: auto;
+}
+
+.custom-file {
+	cursor: pointer;
+}
+.custom-file-label {
+	height: 34px;
+	cursor: pointer;
+	z-index: 5;
+	&::after {
+		content: "Выбрать";
+		height: auto;
+	}
+}
+
+.form-control {
+	font-size: 1em;
+	height: auto;
+}
+
+.img-prod {
+	padding-top: 2rem;
+	width: 100%;
+}
+
+fieldset {
+	min-width: inherit;
+	padding: 1rem;
+	margin: inherit;
+	border-width: 2px;
+	border-style: groove;
+}
+legend {
+	width: auto;
+}

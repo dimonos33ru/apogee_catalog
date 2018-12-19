@@ -8,6 +8,7 @@
 			transition: box-shadow 0.3s ease;
 			margin: 1.5rem 0;
 			background-color: rgba(248, 248, 248, 0.85);
+			
 			.card-img-top {
 				position: relative;
 				overflow: hidden;
@@ -68,6 +69,8 @@
 			}
 			.card-body {
 				position: relative;
+				border-top: 1px solid rgba(0, 0, 0, 0.125);
+				background-color: rgba(0, 0, 0, 0.02);
 				.card-title {
 					text-align: center;
 					font-size: 1em;
@@ -85,5 +88,21 @@
 		.card-deck {
 			margin: 0;
 		}
+	}
+}
+
+.articul {
+	display: flex;
+	justify-content: space-between;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	color: $text-muted;
+	font-style: italic;
+	padding: 0.5rem 1.25rem;
+	background-color: rgba(0, 0, 0, 0.02);
+	&-now {
+		font-size: 0.7em;
+	}
+	&-old {
+		font-size: 0.7em;
 	}
 }

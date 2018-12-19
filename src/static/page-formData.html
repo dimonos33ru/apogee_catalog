@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Форма данных</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -84,68 +84,123 @@
         </div>
       </div>
     </nav>
-    <!-- Навигация "Хлебные крошки"-->
-    <nav class="navigate-breadcrumb">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#"> Главная</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Каталог продукции</li>
-              </ol>
-            </nav>
+    <!-- Форма данных-->
+    <div class="container">
+      <div class="form-wrepper">
+        <ul class="nav nav-tabs" id="formTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true">Изделие</a></li>
+          <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группу</a></li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
+            <div class="container formProduct">
+              <div class="row">
+                <div class="col-md-3">
+                  <fieldset class="form-group">
+                    <legend>Новое изделие</legend>
+                    <label>Группа изделия</label>
+                    <select class="custom-select" name="groupProduct">
+                      <option selected>Выберите изделие...</option>
+                      <option value="1">Раз корпус</option>
+                      <option value="2">Два корпус</option>
+                      <option value="3">Три корпус</option>
+                    </select>
+                    <label>Подгруппа изделия</label>
+                    <select class="custom-select" name="groupSubproduct">
+                      <option selected>Выберите изделие...</option>
+                      <option value="1">Раз корпус</option>
+                      <option value="2">Два корпус</option>
+                      <option value="3">Три корпус</option>
+                    </select>
+                    <label>Артикул</label>
+                    <input class="form-control" type="text" readonly>
+                    <label>Код ТНВЭД</label>
+                    <input class="form-control" type="number" name="tnvd" value="0" min="0" max="50" step="1">
+                    <label>Наименование изделия</label>
+                    <input class="form-control" type="text">
+                    <label>Обозначение по ТД</label>
+                    <input class="form-control" type="text">
+                    <label>Наименование по ТД</label>
+                    <input class="form-control" type="text">
+                    <label>Габариты</label>
+                    <input class="form-control" type="text">
+                    <label>Масса изделия (кг)</label>
+                    <input class="form-control" type="number" name="tnvd" value="0.000" min="0" max="50" step="0.001">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <legend>Изображения изделия</legend>
+                    <div class="custom-file">
+                      <input class="custom-file-input" id="customFile" type="file" name="">
+                      <label class="custom-file-label" for="customFile"></label>
+                    </div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2">
+                  </fieldset>
+                </div>
+                <div class="col-md-9">
+                  <fieldset>
+                    <legend>Список изделий:</legend>
+                    <table class="table table-bordered table-hover table-sm table-responsive">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">Артикул</th>
+                          <th scope="col">Артикул (старый)</th>
+                          <th scope="col">Код ТНВЭД</th>
+                          <th scope="col">Наименование изделия</th>
+                          <th scope="col">Обозначение по ТД</th>
+                          <th scope="col">Наименование по ТД</th>
+                          <th scope="col">Габариты</th>
+                          <th scope="col">Масса (кг)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                    <tr></tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <tr></tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <tr></tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <tr></tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                      </tbody>
+                    </table>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab">
+            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Залетают назад рот они последний которой знаках, алфавит грустный всеми все великий запятых запятой своего она по всей журчит, пор диких даже подзаголовок текста маленькая семь? Своего власти ее, напоивший, не которой ему оксмокс необходимыми рекламных силуэт текстов о что себя.</p>
           </div>
         </div>
       </div>
-    </nav>
-    <!-- Главные категории-->
-    <section class="wrepper-main">
-      <div class="container">
-        <div class="row product_list-img">
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="page-productsItem.html"><img class="card-img-top" src="img/product_items/img1.png" alt="Клапаны пожарные">
-                  <div class="card-body">
-                    <div class="card-title">Клапаны пожарные</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img2.png" alt="Клапаны запорные">
-                  <div class="card-body">
-                    <div class="card-title">Клапаны запорные</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img3.png" alt="Клапаны обратные">
-                  <div class="card-body">
-                    <div class="card-title">Клапаны обратные</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img4.png" alt="Штуцера">
-                  <div class="card-body">
-                    <div class="card-title">Штуцера</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img5.png" alt="Гайка">
-                  <div class="card-body">
-                    <div class="card-title">Гайка</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img6.png" alt="Заглушки">
-                  <div class="card-body">
-                    <div class="card-title">Заглушки</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img7.png" alt="Коллекторы">
-                  <div class="card-body">
-                    <div class="card-title">Коллекторы</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img8.png" alt="Краны">
-                  <div class="card-body">
-                    <div class="card-title">Краны</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img9.png" alt="Головки соединительные пожарные">
-                  <div class="card-body">
-                    <div class="card-title">Головки соединительные пожарные</div>
-                  </div></a></div>
-              <div class="col-lg-3 col-md-4 card-deck"><a class="card" href="#"><img class="card-img-top" src="img/product_items/img10.png" alt="Стволы пожарные">
-                  <div class="card-body">
-                    <div class="card-title">Стволы пожарные</div>
-                  </div></a></div>
-        </div>
-      </div>
-    </section>
+    </div>
     <!-- Подвал сайта-->
     <footer>
       <div class="footer-top">

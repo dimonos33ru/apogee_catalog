@@ -2,6 +2,7 @@ module.exports = function () {
 	$.gulp.task('js:build', function () {
 		return $.gulp.src([
 					'src/static/libs/jquery/dist/jquery-3.3.1.min.js',
+					'src/static/libs/bootstrap/js/bootstrap.min.js',
 					'src/static/js/main.js'								// Always at the end
 					])
 			.pipe($.concat('scripts.min.js'))
