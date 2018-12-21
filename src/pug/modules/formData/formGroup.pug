@@ -1,1 +1,29 @@
-p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Залетают назад рот они последний которой знаках, алфавит грустный всеми все великий запятых запятой своего она по всей журчит, пор диких даже подзаголовок текста маленькая семь? Своего власти ее, напоивший, не которой ему оксмокс необходимыми рекламных силуэт текстов о что себя.
+.container-fluid.formGroup
+	.row
+		.col-md-3
+			fieldset.form-group
+				legend &ensp;Новая группа:&ensp;
+				label Код
+				input.form-control(type="number", name="code-group", value="1" min="0" max="100" step="1")
+				label Наименование
+				input.form-control(type="text")
+				label Примичание
+				textarea(name="note", rows="10").form-control
+			.btn_formProduct
+				button(type="button").btn.btn-secondary Добавить
+				button(type="button").btn.btn-secondary Сбросить
+			button(type="button").btn.btn-dark Удалить
+		.col-md-9
+			fieldset
+				legend &ensp;Список групп:&ensp;
+				table.table.table-bordered
+					thead.thead-light
+						tr
+							th(scope="col" style="width: 20%") Код
+							th(scope="col" style="width: 40%") Наименование
+							th(scope="col" style="width: 40%") Примечание
+					tbody.tb-zebra
+						+tablesRow('Данные', 3)
+						+tablesRow('Данные', 3)
+						+tablesRow('Данные', 3)
+						+tablesRow('Данные', 3)

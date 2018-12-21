@@ -92,11 +92,9 @@
 }
 
 .articul {
+	@extend %font-secondary;
 	display: flex;
 	justify-content: space-between;
-	font-family: Helvetica, Arial, Tahoma, sans-serif;
-	color: $text-muted;
-	font-style: italic;
 	padding: 0.5rem 1.25rem;
 	background-color: rgba(0, 0, 0, 0.02);
 	&-now {

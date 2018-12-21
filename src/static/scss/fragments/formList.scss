@@ -2,7 +2,8 @@
 	background-color: #fff;
 }
 
-.formProduct {
+.formProduct,
+.formGroup {
 	margin-top: 1.5rem;
 	font-size: 0.9em;
 	table {
@@ -15,20 +16,22 @@
 }
 
 .form-group {
-	>label:not(:first-child) {
+	padding-bottom: 2rem;
+	label {
 		padding-top: 1rem;
 	}
+	legend + label {
+		padding: 0;
+	}
 }
-
 .custom-select {
 	height: auto;
 }
-
 .custom-file {
 	cursor: pointer;
 }
 .custom-file-label {
-	height: 34px;
+	height: 30px;
 	cursor: pointer;
 	z-index: 5;
 	&::after {
@@ -36,15 +39,17 @@
 		height: auto;
 	}
 }
-
 .form-control {
 	font-size: 1em;
 	height: auto;
 }
 
 .img-prod {
-	padding-top: 2rem;
-	width: 100%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 1rem;
+	height: 200px;
+	width: auto;
 }
 
 fieldset {
@@ -55,5 +60,41 @@ fieldset {
 	border-style: groove;
 }
 legend {
+	@extend %font-secondary;
 	width: auto;
+}
+
+.btn {
+	font-size: 1em;
+}
+.btn_formProduct {
+	display: flex;	
+	justify-content: space-between;
+	padding: 2rem 0;
+	> .btn {
+		width: 48%;
+		// margin: 0 1rem;
+	}
+	+ .btn {
+		width: 100%;
+		margin-top: -1rem;
+	}
+}
+
+.tr_sel{
+	&:nth-of-type(even) {
+		background-color: rgba(0, 0, 0, 0.03);
+	}
+	&:hover {
+		// background: rgba(#6c757d, 0.2);
+	}
+	td {
+		// word-break: break-all;
+	}
+}
+.selected {
+	// background:$color-primary-4 !important;
+  background-color: #6c757d !important;
+  color:#fff;
+  outline:0;
 }

@@ -58,4 +58,14 @@ $(document).ready(function () { // end hover
 		}
     return false;	
 	});
+
+	// Выделение строки таблицы
+	$('.tr_sel').click(function(){
+		if ($(this).hasClass('selected')) {
+			$(this).removeClass('selected');
+		} else {
+			$('.tr_sel').removeClass('selected');
+			$(this).addClass('selected');
+		}
+	});
 }); // end ready

@@ -2,6 +2,8 @@
 @import "fonts";
 @import "libs";
 
+@import "_mixins/extend";
+
 ::placeholder {
 	color: $divider-color;
 }
