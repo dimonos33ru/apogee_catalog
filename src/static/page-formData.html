@@ -1,372 +1,355 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-	<meta charset="utf-8">
-	<title>Форма данных</title>
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon1.ico" type="image/x-icon">
-	<meta name="theme-color" content="#000">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" href="css/main.min.css">
-</head>
-
-<body>
-	<!-- Шапка-->
-	<header class="header">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-3"><a href="index.html"><img class="logo img-fluid" src="img/logo.png" alt="Апогей"></a></div>
-				<div class="col-md-5">
-					<form class="header-search" action="#">
-						<input type="search" placeholder="Найти...">
-						<button type="submit"><i class="fas fa-search"></i></button>
-					</form>
-				</div>
-				<div class="col-md-3">
-					<div class="p-number justify-content-center"><i class="fas fa-phone"> </i>
-						<p>+7 (495) 783-17-76 </p>
-					</div>
-					<div class="h-mail justify-content-center"><i class="fas fa-envelope"></i>
-						<p>oooapogei@mail.ru</p>
-					</div>
-				</div>
-				<div class="col-md-1">
-					<div class="user"><i class="fas fa-user-alt"></i><i class="fas fa-caret-down"></i>
-						<ul class="dropdown-menu">
-							<li>
-								<p class="user_name">user_name</p>
-							</li>
-							<li><a href="#">Задачи</a></li>
-							<li><a href="page-formData.html">Форма данных</a></li>
-							<li><a href="#">Выйти</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- Главное меню навигации-->
-	<nav class="navigate-top">
-		<div class="container">
-			<div class="row no-gutters">
-				<div class="col-md-3">
-					<ul class="catalog">
-						<li><a class="catalog_name" href="#">Каталог продукции </a>
-							<div class="mega_menu">
-								<ul class="mega_menu-list">
-									<li><a class="mega_menu-items" href="#">Клапаны пожарные</a></li>
-									<li><a class="mega_menu-items" href="#">Клапаны запорные</a></li>
-									<li><a class="mega_menu-items" href="#">Клапаны обратные</a></li>
-									<li><a class="mega_menu-items" href="#">Штуцера</a></li>
-									<li><a class="mega_menu-items" href="#">Гайка</a></li>
-									<li><a class="mega_menu-items" href="#">Заглушки</a></li>
-									<li><a class="mega_menu-items" href="#">Коллекторы</a></li>
-									<li><a class="mega_menu-items" href="#">Краны</a></li>
-									<li><a class="mega_menu-items" href="#">Головки соединительные пожарные</a></li>
-									<li><a class="mega_menu-items" href="#">Стволы пожарные</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-8">
-					<ul class="menu">
-						<li> <a href="#">Главная</a></li>
-						<li> <a href="#">Создать заявку</a></li>
-						<li> <a href="#">Обратная связь</a></li>
-					</ul>
-				</div>
-				<div class="col-md-1 d-flex align-items-center justify-content-center car">
-					<div class="shop_car"><a href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-info" id="badge-cart">0</span></a></div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- Форма данных-->
-	<div class="container-fluid">
-		<div class="form-wrepper">
-			<ul class="nav nav-tabs" id="formTab" role="tablist">
-				<li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab"
-					 aria-controls="formProduct" aria-selected="true">Изделие</a></li>
-				<li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab"
-					 aria-controls="formGroup" aria-selected="false">Группу</a></li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
-					<div class="container-fluid formProduct">
-						<div class="row">
-							<div class="col-md-3">
-								<fieldset class="form-group">
-									<legend>&ensp;Выбрать группу&ensp;</legend>
-									<label>Группа изделия</label>
-									<select class="custom-select" name="groupProduct">
-										<option selected>Выберите изделие...</option>
-										<option value="1">Раз корпус</option>
-										<option value="2">Два корпус</option>
-										<option value="3">Три корпус</option>
-									</select>
-									<label>Подгруппа изделия</label>
-									<select class="custom-select" name="groupSubproduct">
-										<option selected>Выберите изделие...</option>
-										<option value="1">Раз корпус</option>
-										<option value="2">Два корпус</option>
-										<option value="3">Три корпус</option><br>
-									</select>
-								</fieldset>
-								<fieldset class="form-group">
-									<legend>&ensp;Редактор изделия&ensp;</legend>
-									<label>Артикул</label>
-									<input class="form-control" type="text" readonly>
-									<label>Код ТНВЭД</label>
-									<input class="form-control" type="number" name="code-tnvd" value="0" min="0" max="50" step="1">
-									<label>Наименование изделия</label>
-									<input class="form-control" type="text">
-									<label>Обозначение по ТД</label>
-									<input class="form-control" type="text">
-									<label>Наименование по ТД</label>
-									<input class="form-control" type="text">
-									<label>Габариты</label>
-									<input class="form-control" type="text">
-									<label>Масса изделия (кг)</label>
-									<input class="form-control" type="number" name="weight-product" value="0.000" min="0" max="50" step="0.001">
-								</fieldset>
-								<fieldset class="form-group">
-									<legend>&ensp;Изображения изделия&ensp;</legend>
-									<div class="custom-file">
-										<input class="custom-file-input" id="customFile" type="file" name="">
-										<label class="custom-file-label" for="customFile"></label>
-									</div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2">
-								</fieldset>
-								<div class="btn_formProduct">
-									<button class="btn btn-secondary" type="button">Добавить</button>
-									<button class="btn btn-secondary" type="button">Сохранить</button>
-								</div>
-								<button class="btn btn-dark" type="button">Удалить</button>
-							</div>
-							<div class="col-md-9">
-								<fieldset>
-									<legend>&ensp;Список изделий:&ensp;</legend>
-									<table class="table table-bordered">
-										<thead class="thead-light">
-											<tr>
-												<th scope="col" style="width: 11%">Артикул</th>
-												<th scope="col" style="width: 11%">Артикул (старый)</th>
-												<th scope="col" style="width: 11%">Код ТНВЭД</th>
-												<th scope="col" style="width: 15%">Наименование изделия</th>
-												<th scope="col" style="width: 15%">Обозначение по ТД</th>
-												<th scope="col" style="width: 15%">Наименование по ТД</th>
-												<th scope="col" style="width: 11%">Габариты</th>
-												<th scope="col" style="width: 11%">Масса (кг)</th>
-											</tr>
-										</thead>
-										<tbody class="tb-zebra">
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-										</tbody>
-									</table>
-								</fieldset>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab">
-					<div class="container-fluid formGroup">
-						<div class="row">
-							<div class="col-md-3">
-								<fieldset class="form-group">
-									<legend>&ensp;Новая группа:&ensp;</legend>
-									<label>Код</label>
-									<input class="form-control" type="number" name="code-group" value="1" min="0" max="100" step="1">
-									<label>Наименование</label>
-									<input class="form-control" type="text">
-									<label>Примичание</label>
-									<textarea class="form-control" name="note" rows="10"></textarea>
-								</fieldset>
-								<div class="btn_formProduct">
-									<button class="btn btn-secondary" type="button">Добавить</button>
-									<button class="btn btn-secondary" type="button">Сбросить</button>
-								</div>
-								<button class="btn btn-dark" type="button">Удалить</button>
-							</div>
-							<div class="col-md-9">
-								<fieldset>
-									<legend>&ensp;Список групп:&ensp;</legend>
-									<table class="table table-bordered">
-										<thead class="thead-light">
-											<tr>
-												<th scope="col" style="width: 20%">Код</th>
-												<th scope="col" style="width: 40%">Наименование</th>
-												<th scope="col" style="width: 40%">Примечание</th>
-											</tr>
-										</thead>
-										<tbody class="tb-zebra">
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-											<tr class="tr_sel">
-												<td>Данные</td>
-												<td>Данные</td>
-												<td>Данные</td>
-											</tr>
-										</tbody>
-									</table>
-								</fieldset>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Подвал сайта-->
-	<footer>
-		<div class="footer-top">
-			<div class="container">
-				<div class="row justify-content-end firefighter"><img class="img-fluid" src="img/img_footer1.png" alt="firefighter"></div>
-			</div>
-		</div>
-		<div class="footer-down">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 d-flex align-items-end"><img class="img-fluid" src="img/img_footer2.png" alt="klapan">
-						<p class="copyrighted">
-							&copy ООО «Апогей» 2003-2018 <br>Лидер по производству пожарных кранов и клапанов</p>
-					</div>
-					<div class="col-md-2 offset-md-1">
-						<nav class="footer-menu">
-							<ul>
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">Схема проезда</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="col-md-2 offset-md-1">
-						<nav class="footer-menu">
-							<ul>
-								<li><a href="#">В разработке</a></li>
-								<li><a href="#">В разработке</a></li>
-								<li><a href="#">В разработке</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Стрелка вверх-->
-	<div class="top_arrow"><i class="fas fa-angle-up" title='Наверх'></i></div>
-	<!-- Окно чата-->
-	<div class="chat_wrepper">
-		<div class="chat">
-			<div class="chat__head">
-				<div class="chat__head-caption">Чат @Апогей</div>
-			</div>
-			<div class="chat__body">
-				<div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span
-					 class="chat__body__contact-name" title="Разработчик">Админ</span></div>
-				<div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span
-					 class="chat__body__contact-name" title="Конструктор">Мартынов Андрей</span></div>
-				<div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 14:55"><i style="color:#fb6262"
-						 class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Дмитрий Викторович</span></div>
-				<div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 12:00"><i style="color:#fb6262"
-						 class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Директор производства">Пялин
-						Сергей</span></div>
-				<div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 9:30"><i style="color:#fb6262"
-						 class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Юля</span></div>
-			</div>
-			<div class="chat__footer"></div>
-		</div>
-		<div class="dialog">
-			<div class="dialog__head">
-				<div class="dialog__head__name"><span class="dialog__head__name-status"><i class="fas fa-circle"></i></span><span
-					 class="dialog__head__name-lable">Мартынов Андрей</span></div>
-				<div class="dialog__head__close"><span>&times;</span></div>
-			</div>
-			<div class="dialog__body">
-				<div class="dialog__body__message">
-					<div class="dialog__body__message__info">
-						<div class="dialog__body__message__info-from"><span>Админ</span></div>
-						<div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:03</span></div>
-					</div>
-					<div class="dialog__body__message__textblock"><span>Привет! Как дела?</span></div>
-				</div>
-				<div class="dialog__body__message">
-					<div class="dialog__body__message__info message-in">
-						<div class="dialog__body__message__info-from"><span>Мартынов Андрей</span></div>
-						<div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:05</span></div>
-					</div>
-					<div class="dialog__body__message__textblock textblock-in"><span>Привет! Взял мачтера на т-44))</span></div>
-				</div>
-			</div>
-			<div class="dialog__footer">
-				<form class="dialog__footer-input" action="#" method="">
-					<textarea id="input" name="messege" cols="36" rows="1"></textarea>
-					<button type="submit"><i class="fas fa-arrow-left"></i></button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script src="js/scripts.min.js"></script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <title>Форма данных</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon1.ico" type="image/x-icon">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <!-- Шапка-->
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3"><a href="index.html"><img class="logo img-fluid" src="img/logo.png" alt="Апогей"></a></div>
+          <div class="col-md-5">
+            <form class="header-search" action="#">
+              <input type="search" placeholder="Найти...">
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <div class="p-number justify-content-center"><i class="fas fa-phone"> </i>
+              <p>+7 (495) 783-17-76	</p>
+            </div>
+            <div class="h-mail justify-content-center"><i class="fas fa-envelope"></i>
+              <p>oooapogei@mail.ru</p>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="user"><i class="fas fa-user-alt"></i><i class="fas fa-caret-down"></i>
+              <ul class="dropdown-menu">
+                <li><p class="user_name">user_name</p></li>
+                <li><a href="#">Задачи</a></li>
+                <li><a href="page-formData.html">Форма данных</a></li>
+                <li><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Главное меню навигации-->
+    <nav class="navigate-top">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <ul class="catalog">
+              <li><a class="catalog_name" href="#">Каталог продукции </a>
+                <div class="mega_menu">
+                  <ul class="mega_menu-list">
+                    <li><a class="mega_menu-items" href="#">Клапаны пожарные</a></li>
+                    <li><a class="mega_menu-items" href="#">Клапаны запорные</a></li>
+                    <li><a class="mega_menu-items" href="#">Клапаны обратные</a></li>
+                    <li><a class="mega_menu-items" href="#">Штуцера</a></li>
+                    <li><a class="mega_menu-items" href="#">Гайка</a></li>
+                    <li><a class="mega_menu-items" href="#">Заглушки</a></li>
+                    <li><a class="mega_menu-items" href="#">Коллекторы</a></li>
+                    <li><a class="mega_menu-items" href="#">Краны</a></li>
+                    <li><a class="mega_menu-items" href="#">Головки соединительные пожарные</a></li>
+                    <li><a class="mega_menu-items" href="#">Стволы пожарные</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <ul class="menu">
+              <li> <a href="#">Главная</a></li>
+              <li> <a href="#">Создать заявку</a></li>
+              <li> <a href="#">Обратная связь</a></li>
+            </ul>
+          </div>
+          <div class="col-md-1 d-flex align-items-center justify-content-center car">
+            <div class="shop_car"><a href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-info" id="badge-cart">0</span></a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Форма данных-->
+    <div class="container-fluid">
+      <div class="form-wrepper">
+        <ul class="nav nav-tabs" id="formTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true">Изделие</a></li>
+          <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группу</a></li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
+            <div class="container-fluid formProduct">
+              <div class="row">
+                <div class="col-md-3">
+                  <fieldset class="form-group">
+                    <legend>&ensp;Выбрать группу&ensp;</legend>
+                    <label>Группа изделия</label>
+                    <select class="custom-select" name="groupProduct">
+                      <option selected>Выберите изделие...</option>
+                      <option value="1">Раз корпус</option>
+                      <option value="2">Два корпус</option>
+                      <option value="3">Три корпус</option>
+                    </select>
+                    <label>Подгруппа изделия</label>
+                    <select class="custom-select" name="groupSubproduct">
+                      <option selected>Выберите изделие...</option>
+                      <option value="1">Раз корпус</option>
+                      <option value="2">Два корпус</option>
+                      <option value="3">Три корпус</option><br>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <legend>&ensp;Новое изделие&ensp;</legend>
+                    <label>Артикул</label>
+                    <input class="form-control" type="text" readonly>
+                    <label>Код ТНВЭД</label>
+                    <input class="form-control" type="number" name="code-tnvd" value="0" min="0" max="50" step="1">
+                    <label>Наименование изделия</label>
+                    <input class="form-control" type="text">
+                    <label>Обозначение по ТД</label>
+                    <input class="form-control" type="text">
+                    <label>Наименование по ТД</label>
+                    <input class="form-control" type="text">
+                    <label>Габариты</label>
+                    <input class="form-control" type="text">
+                    <label>Масса изделия (кг)</label>
+                    <input class="form-control" type="number" name="weight-product" value="0.000" min="0" max="50" step="0.001">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <legend>&ensp;Изображения изделия&ensp;</legend>
+                    <div class="custom-file">
+                      <input class="custom-file-input" id="customFile" type="file" name="">
+                      <label class="custom-file-label" for="customFile"></label>
+                    </div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2">
+                  </fieldset>
+                  <div class="btn_formProduct">
+                    <button class="btn btn-secondary" type="button">Добавить</button>
+                    <button class="btn btn-secondary" type="button">Сохранить</button>
+                  </div>
+                  <button class="btn btn-dark" type="button">Удалить</button>
+                </div>
+                <div class="col-md-9">
+                  <fieldset>
+                    <legend>&ensp;Список изделий:&ensp;</legend>
+                    <table class="table table-bordered">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col" style="width: 11%">Артикул</th>
+                          <th scope="col" style="width: 11%">Артикул (старый)</th>
+                          <th scope="col" style="width: 11%">Код ТНВЭД</th>
+                          <th scope="col" style="width: 15%">Наименование изделия</th>
+                          <th scope="col" style="width: 15%">Обозначение по ТД</th>
+                          <th scope="col" style="width: 15%">Наименование по ТД</th>
+                          <th scope="col" style="width: 11%">Габариты</th>
+                          <th scope="col" style="width: 11%">Масса (кг)</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tb-zebra">
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                      </tbody>
+                    </table>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab">
+            <div class="container-fluid formGroup">
+              <div class="row">
+                <div class="col-md-3">
+                  <fieldset class="form-group">
+                    <legend>&ensp;Новая группа:&ensp;</legend>
+                    <label>Код</label>
+                    <input class="form-control" type="number" name="code-group" value="1" min="0" max="100" step="1">
+                    <label>Наименование</label>
+                    <input class="form-control" type="text">
+                    <label>Примичание</label>
+                    <textarea class="form-control" name="note" rows="10"></textarea>
+                  </fieldset>
+                  <div class="btn_formProduct">
+                    <button class="btn btn-secondary" type="button">Добавить</button>
+                    <button class="btn btn-secondary" type="button">Сбросить</button>
+                  </div>
+                  <button class="btn btn-dark" type="button">Удалить</button>
+                </div>
+                <div class="col-md-9">
+                  <fieldset>
+                    <legend>&ensp;Список групп:&ensp;</legend>
+                    <table class="table table-bordered">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col" style="width: 20%">Код</th>
+                          <th scope="col" style="width: 40%">Наименование</th>
+                          <th scope="col" style="width: 40%">Примечание</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tb-zebra">
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                                    <tr class="tr_sel">
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                      <td>Данные</td>
+                                    </tr>
+                      </tbody>
+                    </table>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Подвал сайта-->
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row justify-content-end firefighter"><img class="img-fluid" src="img/img_footer1.png" alt="firefighter"></div>
+        </div>
+      </div>
+      <div class="footer-down">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-end"><img class="img-fluid" src="img/img_footer2.png" alt="klapan">
+              <p class="copyrighted">
+                &copy ООО «Апогей» 2003-2018 <br>Лидер по производству пожарных кранов и клапанов</p>
+            </div>
+            <div class="col-md-2 offset-md-1">
+              <nav class="footer-menu">
+                <ul>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Схема проезда</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-md-2 offset-md-1">
+              <nav class="footer-menu">
+                <ul>
+                  <li><a href="#">В разработке</a></li>
+                  <li><a href="#">В разработке</a></li>
+                  <li><a href="#">В разработке</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Стрелка вверх-->
+    <div class="top_arrow"><i class="fas fa-angle-up" title='Наверх'></i></div>
+    <!-- Окно чата-->
+    <div class="chat_wrepper">
+      <div class="chat">
+        <div class="chat__head">
+          <div class="chat__head-caption">Чат @Апогей</div>
+        </div>
+        <div class="chat__body">
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Разработчик">Админ</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Онлайн"><i class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Конструктор">Мартынов Андрей</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 14:55"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Дмитрий Викторович</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 12:00"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Директор производства">Пялин Сергей</span></div>
+          <div class="chat__body__contact"><span class="chat__body__contact-status" title="Был сегодня в 9:30"><i style="color:#fb6262" class="fas fa-circle"></i></span><span class="chat__body__contact-name" title="Технолог">Юля</span></div>
+        </div>
+        <div class="chat__footer"></div>
+      </div>
+      <div class="dialog">
+        <div class="dialog__head">
+          <div class="dialog__head__name"><span class="dialog__head__name-status"><i class="fas fa-circle"></i></span><span class="dialog__head__name-lable">Мартынов Андрей</span></div>
+          <div class="dialog__head__close"><span>&times;</span></div>
+        </div>
+        <div class="dialog__body">
+          <div class="dialog__body__message">
+            <div class="dialog__body__message__info">
+              <div class="dialog__body__message__info-from"><span>Админ</span></div>
+              <div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:03</span></div>
+            </div>
+            <div class="dialog__body__message__textblock"><span>Привет! Как дела?</span></div>
+          </div>
+          <div class="dialog__body__message">
+            <div class="dialog__body__message__info message-in">
+              <div class="dialog__body__message__info-from"><span>Мартынов Андрей</span></div>
+              <div class="dialog__body__message__info-datetime"><span class="date">Сегодня</span><span class="time">12:05</span></div>
+            </div>
+            <div class="dialog__body__message__textblock textblock-in"><span>Привет! Взял мачтера на т-44))</span></div>
+          </div>
+        </div>
+        <div class="dialog__footer">
+          <form class="dialog__footer-input" action="#" method="">
+            <textarea id="input" name="messege" cols="36" rows="1"></textarea>
+            <button type="submit"><i class="fas fa-arrow-left"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>

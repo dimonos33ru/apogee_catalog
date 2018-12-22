@@ -13,18 +13,17 @@ $(document).ready(function () { // end hover
 		});	// end .user hover
 
 	// выпадающее меню MegaMenu
-	$('.catalog').hover(
-		function () {
-			clearTimeout($.data(this, 'timer'));
-			$('.mega_menu', this).stop().fadeIn(200);
-			$('a.catalog_name').removeClass('catalog_name').addClass('catalog_name2');
-		},
-		function () {
-			$.data(this, 'timer', setTimeout($.proxy(function () {
-				$('.mega_menu', this).stop().fadeOut(200);
-				$('a.catalog_name2').removeClass('catalog_name2').addClass('catalog_name');
-			}, this), 500));
-		});	// end MegaMenu hover
+	window.onclick = function(event) {
+		var target = event.target;
+		
+		if (target.closest('.catalog')) {
+			$('.mega_menu').stop().fadeToggle(200);
+			$('.catalog_name').toggleClass('catalog_name2');
+		} else {
+			$('.mega_menu').stop().fadeOut(200);
+			$('a.catalog_name').removeClass('catalog_name2');
+		}
+	};	// end MegaMenu hover
 
 	// Счетчик корзины 
 	$('.add-cart').click(function (e) { 
@@ -60,7 +59,7 @@ $(document).ready(function () { // end hover
 	});
 
 	// Выделение строки таблицы
-	$('.tr_sel').click(function(){
+	$('table').on('click', '.tr_sel', function () {
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
 		} else {
