@@ -1,0 +1,136 @@
+.form-request {
+	position: relative;
+	// padding-bottom: 2rem;
+	&::before {
+		content: "";
+		width: 97.3%;
+		height: 100%;
+		position: absolute;
+		background-color: #fff;
+		z-index: -1;
+	}
+	.caption-request {
+		position: relative;
+		padding: 2rem 0 2rem 1.5rem;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 1rem;
+			height: 1px;
+			width: 98.1%;
+			background: #e8e8e8;
+		}
+	}
+	.request {
+		display: flex;
+		align-items: center;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 2.5rem;
+			height: 1px;
+			width: 95.6%;
+			background: #e8e8e8;
+		}
+		&__img {
+			img {
+				display: block;
+				margin: 0 auto;
+				height: 100px;
+				padding: 1.5rem 0;
+				width: auto;
+			}
+		}
+		&__name {
+			font-weight: bold;
+		}
+		&__articul {
+			display: flex;			
+			font-size: 0.8em;
+			.art_cap {
+				color: $text-muted;
+			}
+			.art_number {
+				color: $text;
+				margin-left: 1rem;
+				span {
+					display: block;
+				}
+			}
+		}
+		&__close {
+			position: absolute;
+			right: 2.8rem;
+			top: 0;
+			color: $text-muted;
+			font-size: 1.3em;
+			cursor: pointer;
+		}
+	}
+}
+
+.request__amount {
+	display: flex;
+	align-items: center;
+	color: $text-muted;
+	font-size: 0.8em;
+	.input-value {
+		// display: inline-block;
+    margin-left: 0.7rem;
+		.db-numeric,
+		.minus,
+		.plus {
+			width: 30px;
+			height: 16px;
+			padding: 0;
+			float: left;
+			font: Tahoma,Arial,Helvetica,sans-serif;
+			color: $text;
+			background: 0 0;
+			border: none;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+		 }
+		.db-numeric {
+			width: 34px;
+			cursor: default;
+			&:focus {
+				outline: 0;
+			}
+		}
+		.minus,
+		.plus {
+			border: 1px solid #d5d5d5;
+			border-radius: 50%;
+			height: 17px;
+			width: 17px;
+		}
+		.minus::after,
+		.plus::after,
+		.plus::before {
+			background: #2d2d2d;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 4px;
+			position: absolute;
+			top: 7px;
+			width: 7px;
+		}
+		.plus::before {
+			transform: rotate(-90deg);
+			left: 4px;
+			top: 7px;
+		}
+	}
+}
+
+.make_request {
+	padding: 2rem 1rem;
+	display: flex;
+	justify-content: flex-end;
+}

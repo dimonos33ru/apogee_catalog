@@ -197,7 +197,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #8b8b8b;
   text-align: left;
   caption-side: bottom; }
 
@@ -3715,7 +3715,7 @@ textarea.form-control {
   margin-top: 0.3rem;
   margin-left: -1.25rem; }
   .form-check-input:disabled ~ .form-check-label {
-    color: #6c757d; }
+    color: #8b8b8b; }
 
 .form-check-label {
   margin-bottom: 0; }
@@ -4539,7 +4539,7 @@ body {
   font-family: "opensans", sans-serif;
   overflow-x: hidden;
   background-color: #fff;
-  background-image: url(../img/background/light_wool.png);
+  background-image: url(../../img/background/light_wool.png);
   color: #333; }
   body ul {
     margin: 0;
@@ -4550,6 +4550,58 @@ body {
     padding: 0; }
   body p {
     margin: 0; }
+
+.button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: #eb5f20;
+  padding: 1.5rem 4.5rem;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease; }
+  .button::after {
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: #0b0401;
+    opacity: 0.18;
+    -webkit-border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0; }
+  .button:focus, .button:hover {
+    text-decoration: none;
+    color: #fff; }
+  .button:hover {
+    background-color: #ed7037;
+    cursor: pointer; }
+    .button:hover::after {
+      opacity: 0.22; }
+  .button:active {
+    background-color: #de5214; }
+    .button:active::after {
+      opacity: 0.32; }
+
+.content {
+  min-height: -webkit-calc(100vh - 537px);
+  min-height: calc(100vh - 537px); }
 
 .header {
   background-color: #f6f6f7;
@@ -5068,10 +5120,15 @@ body {
     vertical-align: top;
     white-space: nowrap; }
 
+.table_limiter {
+  max-height: 1078px;
+  overflow: auto; }
+
 .form-group {
   padding-bottom: 2rem; }
   .form-group label {
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    margin-bottom: 0; }
   .form-group legend + label {
     padding: 0; }
 
@@ -5108,7 +5165,8 @@ fieldset {
   border-style: groove; }
 
 legend {
-  width: auto; }
+  width: auto;
+  margin-bottom: 0; }
 
 .btn {
   font-size: 1em; }
@@ -5122,7 +5180,7 @@ legend {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 2rem 0; }
+  padding: 1rem 0 2rem 0; }
   .btn_formProduct > .btn {
     width: 48%; }
   .btn_formProduct + .btn {
@@ -5137,46 +5195,181 @@ legend {
   color: #fff;
   outline: 0; }
 
-footer .footer-top {
+.form-request {
+  position: relative; }
+  .form-request::before {
+    content: "";
+    width: 97.3%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    z-index: -1; }
+  .form-request .caption-request {
+    position: relative;
+    padding: 2rem 0 2rem 1.5rem; }
+    .form-request .caption-request::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      height: 1px;
+      width: 98.1%;
+      background: #e8e8e8; }
+  .form-request .request {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative; }
+    .form-request .request::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 2.5rem;
+      height: 1px;
+      width: 95.6%;
+      background: #e8e8e8; }
+    .form-request .request__img img {
+      display: block;
+      margin: 0 auto;
+      height: 100px;
+      padding: 1.5rem 0;
+      width: auto; }
+    .form-request .request__name {
+      font-weight: bold; }
+    .form-request .request__articul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 0.8em; }
+      .form-request .request__articul .art_cap {
+        color: #8b8b8b; }
+      .form-request .request__articul .art_number {
+        color: #333;
+        margin-left: 1rem; }
+        .form-request .request__articul .art_number span {
+          display: block; }
+    .form-request .request__close {
+      position: absolute;
+      right: 2.8rem;
+      top: 0;
+      color: #8b8b8b;
+      font-size: 1.3em;
+      cursor: pointer; }
+
+.request__amount {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #8b8b8b;
+  font-size: 0.8em; }
+  .request__amount .input-value {
+    margin-left: 0.7rem; }
+    .request__amount .input-value .db-numeric,
+    .request__amount .input-value .minus,
+    .request__amount .input-value .plus {
+      width: 30px;
+      height: 16px;
+      padding: 0;
+      float: left;
+      font: Tahoma,Arial,Helvetica,sans-serif;
+      color: #333;
+      background: 0 0;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      position: relative; }
+    .request__amount .input-value .db-numeric {
+      width: 34px;
+      cursor: default; }
+      .request__amount .input-value .db-numeric:focus {
+        outline: 0; }
+    .request__amount .input-value .minus,
+    .request__amount .input-value .plus {
+      border: 1px solid #d5d5d5;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      height: 17px;
+      width: 17px; }
+    .request__amount .input-value .minus::after,
+    .request__amount .input-value .plus::after,
+    .request__amount .input-value .plus::before {
+      background: #2d2d2d;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 4px;
+      position: absolute;
+      top: 7px;
+      width: 7px; }
+    .request__amount .input-value .plus::before {
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      left: 4px;
+      top: 7px; }
+
+.make_request {
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.footer-top {
   position: relative;
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: -4px; }
 
-footer .footer-down {
+.footer-down {
   background-color: #5192CC;
   padding: 3.2rem 0; }
-  footer .footer-down .copyrighted {
+  .footer-down .copyrighted {
     padding: 0.7rem 1.5rem;
     color: #cecece;
     font-size: 0.8125em;
     line-height: 1.3em; }
-  footer .footer-down .footer-menu > ul li {
+  .footer-down .footer-menu > ul li {
     margin-bottom: 1rem;
     -webkit-transition: -webkit-transform 0.2s ease;
     transition: -webkit-transform 0.2s ease;
     -o-transition: transform 0.2s ease;
     transition: transform 0.2s ease;
     transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
-    footer .footer-down .footer-menu > ul li:last-child {
+    .footer-down .footer-menu > ul li:last-child {
       margin: 0; }
-    footer .footer-down .footer-menu > ul li::before {
+    .footer-down .footer-menu > ul li::before {
       font-family: "Font Awesome 5 Free";
       content: "\f105";
       font-size: .9375em;
       color: white;
       font-weight: 900; }
-    footer .footer-down .footer-menu > ul li:hover {
+    .footer-down .footer-menu > ul li:hover {
       -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
       transform: translateY(-2px); }
-    footer .footer-down .footer-menu > ul li a {
+    .footer-down .footer-menu > ul li a {
       display: inline-block;
       color: white;
       font-weight: 400;
       font-size: .9375em;
       padding: 0 1.5rem;
       text-decoration: none; }
-      footer .footer-down .footer-menu > ul li a:hover {
+      .footer-down .footer-menu > ul li a:hover {
         border-bottom: 1px dashed white; }
 
 .chat_wrepper {

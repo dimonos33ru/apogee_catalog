@@ -79,197 +79,201 @@
             </ul>
           </div>
           <div class="col-md-1 d-flex align-items-center justify-content-center car">
-            <div class="shop_car"><a href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-info" id="badge-cart">0</span></a></div>
+            <div class="shop_car"><a href="page-formRequest.html"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-info" id="badge-cart">0</span></a></div>
           </div>
         </div>
       </div>
     </nav>
-    <!-- Форма данных-->
-    <div class="container-fluid">
-      <div class="form-wrepper">
-        <ul class="nav nav-tabs" id="formTab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true">Изделие</a></li>
-          <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группу</a></li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
-            <div class="container-fluid formProduct">
-              <div class="row">
-                <div class="col-md-3">
-                  <fieldset class="form-group">
-                    <legend>&ensp;Выбрать группу&ensp;</legend>
-                    <label>Группа изделия</label>
-                    <select class="custom-select" name="groupProduct">
-                      <option selected>Выберите изделие...</option>
-                      <option value="1">Раз корпус</option>
-                      <option value="2">Два корпус</option>
-                      <option value="3">Три корпус</option>
-                    </select>
-                    <label>Подгруппа изделия</label>
-                    <select class="custom-select" name="groupSubproduct">
-                      <option selected>Выберите изделие...</option>
-                      <option value="1">Раз корпус</option>
-                      <option value="2">Два корпус</option>
-                      <option value="3">Три корпус</option><br>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-group">
-                    <legend>&ensp;Новое изделие&ensp;</legend>
-                    <label>Артикул</label>
-                    <input class="form-control" type="text" readonly>
-                    <label>Код ТНВЭД</label>
-                    <input class="form-control" type="number" name="code-tnvd" value="0" min="0" max="50" step="1">
-                    <label>Наименование изделия</label>
-                    <input class="form-control" type="text">
-                    <label>Обозначение по ТД</label>
-                    <input class="form-control" type="text">
-                    <label>Наименование по ТД</label>
-                    <input class="form-control" type="text">
-                    <label>Габариты</label>
-                    <input class="form-control" type="text">
-                    <label>Масса изделия (кг)</label>
-                    <input class="form-control" type="number" name="weight-product" value="0.000" min="0" max="50" step="0.001">
-                  </fieldset>
-                  <fieldset class="form-group">
-                    <legend>&ensp;Изображения изделия&ensp;</legend>
-                    <div class="custom-file">
-                      <input class="custom-file-input" id="customFile" type="file" name="">
-                      <label class="custom-file-label" for="customFile"></label>
-                    </div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2">
-                  </fieldset>
-                  <div class="btn_formProduct">
-                    <button class="btn btn-secondary" type="button">Добавить</button>
-                    <button class="btn btn-secondary" type="button">Сохранить</button>
+    <section class="content"> 
+      <!-- Форма данных-->
+      <div class="container-fluid">
+        <div class="form-wrepper">
+          <ul class="nav nav-tabs" id="formTab" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true">Изделие</a></li>
+            <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группу</a></li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
+              <div class="container-fluid formProduct">
+                <div class="row">
+                  <div class="col-md-3">
+                    <fieldset class="form-group">
+                      <legend>&ensp;Выбрать группу&ensp;</legend>
+                      <label>Группа изделия</label>
+                      <select class="custom-select" name="groupProduct">
+                        <option selected>Выберите изделие...</option>
+                        <option value="1">Раз корпус</option>
+                        <option value="2">Два корпус</option>
+                        <option value="3">Три корпус</option>
+                      </select>
+                      <label>Подгруппа изделия</label>
+                      <select class="custom-select" name="groupSubproduct">
+                        <option selected>Выберите изделие...</option>
+                        <option value="1">Раз корпус</option>
+                        <option value="2">Два корпус</option>
+                        <option value="3">Три корпус</option><br>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <legend>&ensp;Новое изделие&ensp;</legend>
+                      <label>Артикул</label>
+                      <input class="form-control" type="text" readonly>
+                      <label>Код ТНВЭД</label>
+                      <input class="form-control" type="number" name="code-tnvd" value="0" min="0" max="50" step="1">
+                      <label>Наименование изделия</label>
+                      <input class="form-control" type="text">
+                      <label>Обозначение по ТД</label>
+                      <input class="form-control" type="text">
+                      <label>Наименование по ТД</label>
+                      <input class="form-control" type="text">
+                      <label>Габариты</label>
+                      <input class="form-control" type="text">
+                      <label>Масса изделия (кг)</label>
+                      <input class="form-control" type="number" name="weight-product" value="0.000" min="0" max="50" step="0.001">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <legend>&ensp;Изображения изделия&ensp;</legend>
+                      <div class="custom-file">
+                        <input class="custom-file-input" id="customFile" type="file" name="">
+                        <label class="custom-file-label" for="customFile"></label>
+                      </div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2" style="display:none">
+                    </fieldset>
+                    <div class="btn_formProduct">
+                      <button class="btn btn-secondary" type="button">Добавить</button>
+                      <button class="btn btn-secondary" type="button">Сохранить</button>
+                    </div>
+                    <button class="btn btn-dark" type="button">Удалить</button>
                   </div>
-                  <button class="btn btn-dark" type="button">Удалить</button>
-                </div>
-                <div class="col-md-9">
-                  <fieldset>
-                    <legend>&ensp;Список изделий:&ensp;</legend>
-                    <table class="table table-bordered">
-                      <thead class="thead-light">
-                        <tr>
-                          <th scope="col" style="width: 11%">Артикул</th>
-                          <th scope="col" style="width: 11%">Артикул (старый)</th>
-                          <th scope="col" style="width: 11%">Код ТНВЭД</th>
-                          <th scope="col" style="width: 15%">Наименование изделия</th>
-                          <th scope="col" style="width: 15%">Обозначение по ТД</th>
-                          <th scope="col" style="width: 15%">Наименование по ТД</th>
-                          <th scope="col" style="width: 11%">Габариты</th>
-                          <th scope="col" style="width: 11%">Масса (кг)</th>
-                        </tr>
-                      </thead>
-                      <tbody class="tb-zebra">
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                      </tbody>
-                    </table>
-                  </fieldset>
+                  <div class="col-md-9">
+                    <fieldset>
+                      <legend>&ensp;Список изделий:&ensp;</legend>
+                      <div class="table_limiter">
+                        <table class="table table-bordered">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col" style="width: 11%">Артикул</th>
+                              <th scope="col" style="width: 11%">Артикул (старый)</th>
+                              <th scope="col" style="width: 11%">Код ТНВЭД</th>
+                              <th scope="col" style="width: 15%">Наименование изделия</th>
+                              <th scope="col" style="width: 15%">Обозначение по ТД</th>
+                              <th scope="col" style="width: 15%">Наименование по ТД</th>
+                              <th scope="col" style="width: 11%">Габариты</th>
+                              <th scope="col" style="width: 11%">Масса (кг)</th>
+                            </tr>
+                          </thead>
+                          <tbody class="tb-zebra">
+                                          <tr class="tr_sel">
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                          </tr>
+                                          <tr class="tr_sel">
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                          </tr>
+                                          <tr class="tr_sel">
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                          </tr>
+                                          <tr class="tr_sel">
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                            <td>Данные</td>
+                                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </fieldset>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab">
-            <div class="container-fluid formGroup">
-              <div class="row">
-                <div class="col-md-3">
-                  <fieldset class="form-group">
-                    <legend>&ensp;Новая группа:&ensp;</legend>
-                    <label>Код</label>
-                    <input class="form-control" type="number" name="code-group" value="1" min="0" max="100" step="1">
-                    <label>Наименование</label>
-                    <input class="form-control" type="text">
-                    <label>Примичание</label>
-                    <textarea class="form-control" name="note" rows="10"></textarea>
-                  </fieldset>
-                  <div class="btn_formProduct">
-                    <button class="btn btn-secondary" type="button">Добавить</button>
-                    <button class="btn btn-secondary" type="button">Сбросить</button>
+            <div class="tab-pane fade" id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab">
+              <div class="container-fluid formGroup">
+                <div class="row">
+                  <div class="col-md-3">
+                    <fieldset class="form-group">
+                      <legend>&ensp;Новая группа:&ensp;</legend>
+                      <label>Код</label>
+                      <input class="form-control" type="number" name="code-group" value="1" min="0" max="100" step="1">
+                      <label>Наименование</label>
+                      <input class="form-control" type="text">
+                      <label>Примичание</label>
+                      <textarea class="form-control" name="note" rows="10"></textarea>
+                    </fieldset>
+                    <div class="btn_formProduct">
+                      <button class="btn btn-secondary" type="button">Добавить</button>
+                      <button class="btn btn-secondary" type="button">Сбросить</button>
+                    </div>
+                    <button class="btn btn-dark" type="button">Удалить</button>
                   </div>
-                  <button class="btn btn-dark" type="button">Удалить</button>
-                </div>
-                <div class="col-md-9">
-                  <fieldset>
-                    <legend>&ensp;Список групп:&ensp;</legend>
-                    <table class="table table-bordered">
-                      <thead class="thead-light">
-                        <tr>
-                          <th scope="col" style="width: 20%">Код</th>
-                          <th scope="col" style="width: 40%">Наименование</th>
-                          <th scope="col" style="width: 40%">Примечание</th>
-                        </tr>
-                      </thead>
-                      <tbody class="tb-zebra">
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                                    <tr class="tr_sel">
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                      <td>Данные</td>
-                                    </tr>
-                      </tbody>
-                    </table>
-                  </fieldset>
+                  <div class="col-md-9">
+                    <fieldset>
+                      <legend>&ensp;Список групп:&ensp;</legend>
+                      <table class="table table-bordered">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col" style="width: 20%">Код</th>
+                            <th scope="col" style="width: 40%">Наименование</th>
+                            <th scope="col" style="width: 40%">Примечание</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tb-zebra">
+                                        <tr class="tr_sel">
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                        </tr>
+                                        <tr class="tr_sel">
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                        </tr>
+                                        <tr class="tr_sel">
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                        </tr>
+                                        <tr class="tr_sel">
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                          <td>Данные</td>
+                                        </tr>
+                        </tbody>
+                      </table>
+                    </fieldset>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Подвал сайта-->
-    <footer>
+    <footer class="footer">
       <div class="footer-top">
         <div class="container">
           <div class="row justify-content-end firefighter"><img class="img-fluid" src="img/img_footer1.png" alt="firefighter"></div>

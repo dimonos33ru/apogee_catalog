@@ -43,7 +43,7 @@ mixin tablesRow(item,int)
 				.custom-file
 					input#customFile(type="file", name="").custom-file-input
 					label(for="customFile").custom-file-label
-				img(src="../img/placeholder_img.png" alt="Выберите изображение" border="2").img-prod
+				img(src="../img/placeholder_img.png" alt="Выберите изображение" border="2" style="display:none").img-prod
 			.btn_formProduct
 				button(type="button").btn.btn-secondary Добавить
 				button(type="button").btn.btn-secondary Сохранить
@@ -51,19 +51,20 @@ mixin tablesRow(item,int)
 		.col-md-9
 			fieldset
 				legend &ensp;Список изделий:&ensp;
-				table.table.table-bordered
-					thead.thead-light
-						tr
-							th(scope="col" style="width: 11%") Артикул
-							th(scope="col" style="width: 11%") Артикул (старый)
-							th(scope="col" style="width: 11%") Код ТНВЭД
-							th(scope="col" style="width: 15%") Наименование изделия
-							th(scope="col" style="width: 15%") Обозначение по ТД
-							th(scope="col" style="width: 15%") Наименование по ТД
-							th(scope="col" style="width: 11%") Габариты
-							th(scope="col" style="width: 11%") Масса (кг)
-					tbody.tb-zebra
-						+tablesRow('Данные', 8)
-						+tablesRow('Данные', 8)
-						+tablesRow('Данные', 8)
-						+tablesRow('Данные', 8)
+				.table_limiter
+					table.table.table-bordered
+						thead.thead-light
+							tr
+								th(scope="col" style="width: 11%") Артикул
+								th(scope="col" style="width: 11%") Артикул (старый)
+								th(scope="col" style="width: 11%") Код ТНВЭД
+								th(scope="col" style="width: 15%") Наименование изделия
+								th(scope="col" style="width: 15%") Обозначение по ТД
+								th(scope="col" style="width: 15%") Наименование по ТД
+								th(scope="col" style="width: 11%") Габариты
+								th(scope="col" style="width: 11%") Масса (кг)
+						tbody.tb-zebra
+							+tablesRow('Данные', 8)
+							+tablesRow('Данные', 8)
+							+tablesRow('Данные', 8)
+							+tablesRow('Данные', 8)

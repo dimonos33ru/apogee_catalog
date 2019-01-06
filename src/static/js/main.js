@@ -23,7 +23,7 @@ $(document).ready(function () { // end hover
 			$('.mega_menu').stop().fadeOut(200);
 			$('a.catalog_name').removeClass('catalog_name2');
 		}
-	};	// end MegaMenu hover
+	};	// end MegaMenu
 
 	// Счетчик корзины 
 	$('.add-cart').click(function (e) { 
@@ -66,5 +66,11 @@ $(document).ready(function () { // end hover
 			$('.tr_sel').removeClass('selected');
 			$(this).addClass('selected');
 		}
+	});
+
+	$(".request__close").click(function (e) { 
+		e.preventDefault();
+		var delEl = $(this).closest(".request");
+		delEl.remove();		
 	});
 }); // end ready

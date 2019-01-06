@@ -15,10 +15,16 @@
 	}
 }
 
+.table_limiter {
+	max-height: 1078px;
+	overflow: auto;
+}
+
 .form-group {
 	padding-bottom: 2rem;
 	label {
 		padding-top: 1rem;
+		margin-bottom: 0;
 	}
 	legend + label {
 		padding: 0;
@@ -62,6 +68,7 @@ fieldset {
 legend {
 	@extend %font-secondary;
 	width: auto;
+	margin-bottom: 0;
 }
 
 .btn {
@@ -70,10 +77,9 @@ legend {
 .btn_formProduct {
 	display: flex;	
 	justify-content: space-between;
-	padding: 2rem 0;
+	padding: 1rem 0 2rem 0;
 	> .btn {
 		width: 48%;
-		// margin: 0 1rem;
 	}
 	+ .btn {
 		width: 100%;
@@ -85,15 +91,8 @@ legend {
 	&:nth-of-type(even) {
 		background-color: rgba(0, 0, 0, 0.03);
 	}
-	&:hover {
-		// background: rgba(#6c757d, 0.2);
-	}
-	td {
-		// word-break: break-all;
-	}
 }
 .selected {
-	// background:$color-primary-4 !important;
   background-color: #6c757d !important;
   color:#fff;
   outline:0;
