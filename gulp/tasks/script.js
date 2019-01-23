@@ -8,9 +8,9 @@ module.exports = function () {
 			.pipe($.concat('scripts.min.js'))
 			.pipe($.uglify())
 			.pipe($.gulp.dest('build/js'))
-			.pipe($.browserSync.reload({
-				stream: true
-			}));
+			// .pipe($.browserSync.reload({
+			// 	stream: true
+			// }));
 	});
 
 	$.gulp.task('js:dev', function () {

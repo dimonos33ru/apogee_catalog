@@ -1,0 +1,61 @@
+a(data-toggle="collapse", href="#formTasks", role="button", aria-expanded="false", aria-controls="formTasks").btnFieldsTasks Создать задание
+
+.collapse.multi-collapse#formTasks
+	.card.card-body.formFieldsTasks.form-wrepper-grey
+		.form-group.row
+			label(for="taskTheme").col-sm-2.col-form-label Тема:
+			.col-sm-10
+				input(type="text").form-control#taskTheme
+		.form-group.row
+			label(for="taskSender").col-sm-2.col-form-label Отправитель:
+			.col-sm-10
+				input(type="text").form-control#taskSender
+		.form-group.row
+			label(for="taskToHow").col-sm-2.col-form-label Кому:
+			.col-sm-10
+				select(name="taskToHow").form-control#taskToHow
+					option(selected) Выберите сотрудника...
+					option(value="1") Раз сотрудник
+					option(value="2") Два сотрудник
+					option(value="3") Три сотрудник
+		fieldset
+			legend
+			.form-group.row
+				label(for="taskDataStart").col-sm-2.col-form-label Начать работу:
+				.col-sm-4
+					input(type="date" name="bday").form-control#taskDataStart
+				label(for="taskDataDeadline").col-sm-2.col-form-label Контрольный срок:
+				.col-sm-4
+					input(type="date" name="bday").form-control#taskDataDeadline
+			.form-group.row
+				label(for="taskData").col-sm-2.col-form-label Срок:
+				.col-sm-4
+					input(type="date" name="bday").form-control#taskData
+				label(for="taskController").col-sm-2.col-form-label Контролёр:
+				.col-sm-4
+					select(name="taskController").form-control#taskController
+						option(selected)
+						option(value="1") Раз Контролёр
+						option(value="2") Два Контролёр
+						option(value="3") Три Контролёр
+			.form-group.row
+				label(for="taskImportant").col-sm-2.col-form-label Важность:
+				.col-sm-2
+					select(name="taskImportant").form-control#taskImportant
+						option(selected)
+						option(value="1") Обычная
+						option(value="2") Важно
+						option(value="3") Очень важно
+				label(for="taskReady").col-sm-1.col-form-label Готовность:
+				.col-sm-1
+					input(type="number", name="weight-product", value="0.00" min="0" max="100" step="0.1").form-control#taskReady
+				label(for="taskStatus").col-sm-2.col-form-label Состояние:
+				.col-sm-4
+					select(name="taskStatus").form-control#taskStatus
+						option(selected)
+						option(value="1") Выполняется
+						option(value="2") В очереди
+						option(value="3") Не выполняется
+		fieldset.form-group
+			legend &ensp;Сообщение&ensp;
+			textarea(name="note", rows="5").form-control

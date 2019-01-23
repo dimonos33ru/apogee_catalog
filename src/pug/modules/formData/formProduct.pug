@@ -7,7 +7,7 @@ mixin tablesRow(item,int)
 .container-fluid.formProduct
 	.row
 		.col-md-3
-			fieldset.form-group
+			fieldset.form-group.form-wrepper-grey
 				legend &ensp;Выбрать группу&ensp;
 				label Группа изделия
 				select.custom-select(name="groupProduct")
@@ -22,7 +22,7 @@ mixin tablesRow(item,int)
 					option(value="2") Два корпус
 					option(value="3") Три корпус
 					br
-			fieldset.form-group
+			fieldset.form-group.form-wrepper-grey
 				legend &ensp;Новое изделие&ensp;
 				label Артикул
 				input.form-control(type="text" readonly)
@@ -40,10 +40,40 @@ mixin tablesRow(item,int)
 				input.form-control(type="number", name="weight-product", value="0.000" min="0" max="50" step="0.001")
 			fieldset.form-group
 				legend &ensp;Изображения изделия&ensp;
-				.custom-file
-					input#customFile(type="file", name="").custom-file-input
-					label(for="customFile").custom-file-label
-				img(src="../img/placeholder_img.png" alt="Выберите изображение" border="2" style="display:none").img-prod
+				button(type="button", data-toggle="modal", data-target="#ModalImage").btn.btn-info Загрузить изображение
+				.modal.fade#ModalImage(tabindex="-1", role="dialog", aria-labelledby="ModalCenterTitle", aria-hidden="true")
+					.modal-dialog.modal-dialog-centered.modal-lg(role="document")
+						.modal-content
+							.modal-header
+								h5.modal-title Выбрать изображение
+								button(type="button", data-dismiss="modal", aria-label="Close").close
+									span(aria-hidden="true") &times;
+							.modal-body
+								.container-fluid
+									.row
+										.col-2
+											img(src="img/product_items/img1.png", alt="изображение из базы").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+										.col-2
+											img(src="img/product_items/img1.png", alt="").img-load
+							.modal-footer
+								button(type="button", data-dismiss="modal").btn.btn-secondary Отмена
+								button(type="button").btn.btn-success Загрузить
 			.btn_formProduct
 				button(type="button").btn.btn-secondary Добавить
 				button(type="button").btn.btn-secondary Сохранить
@@ -63,7 +93,7 @@ mixin tablesRow(item,int)
 								th(scope="col" style="width: 15%") Наименование по ТД
 								th(scope="col" style="width: 11%") Габариты
 								th(scope="col" style="width: 11%") Масса (кг)
-						tbody.tb-zebra
+						tbody
 							+tablesRow('Данные', 8)
 							+tablesRow('Данные', 8)
 							+tablesRow('Данные', 8)

@@ -1,0 +1,89 @@
+.task-wrepper {
+	.nav-pills {
+		>a {
+			color: $text;
+			&:hover:not(.active) {
+				color: $text-muted;
+			}
+		}
+	}
+	.nav-link {
+		border-radius: 0;
+		&.active {
+		background-color: #f1f1f1;
+		color: $accent;
+		}
+	}
+	.nav-link {
+		border-bottom: 1px solid $divider-color;
+	}
+		
+	.fas {
+		margin-right: 1rem;
+	}
+}
+
+.tab-pane {
+	h1 {
+		padding: 1rem 1.5rem;
+	}
+	table {
+		text-align: center;
+	}
+	th {
+		font-size: 0.9em;
+		vertical-align: top;
+		white-space: nowrap;
+	}
+	.tb-task {
+		font-size: 0.9em;
+		font-style: italic;
+		.far {
+			font-size: 1.3em;
+		}
+	}
+}
+
+.btnFieldsTasks {
+	display: block;
+	font-size: 1.1em;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+	background-color: #eee;
+	color: $text;
+	transition: background-color 0.5s ease;
+	&:hover {
+		background-color: #dadada;
+		text-decoration: none;
+		color: $text;
+	}
+	&[aria-expanded="true"] {
+		background-color: #dadada;
+	}
+	&[aria-expanded="false"]:after {
+		content: '\002B';
+		color: $accent;
+		font-weight: bold;
+		float: left;
+		margin-right: 1rem;
+	}
+	&[aria-expanded="true"]:after {
+		content: "\2212";
+		color: $accent;
+		font-weight: bold;
+		float: left;
+		margin-right: 1rem;
+	}
+}
+
+.formFieldsTasks {
+	#taskTheme {
+		font-weight: 600;
+	}
+	#taskToHow {
+		font-size: 0.9em;
+	}
+	fieldset {
+		margin: 0rem;
+	}
+}

@@ -5,7 +5,9 @@
 			li.nav-item
 				a(id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true").nav-link.active Изделие
 			li.nav-item
-				a(id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false").nav-link Группу
+				a(id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false").nav-link Группы
+			li.nav-item
+				a(id="formImage-tab" data-toggle="tab" href="#formImage" role="tab" aria-controls="formImage" aria-selected="false").nav-link Изображения
 
 		.tab-content#myTabContent
 			div(id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab").tab-pane.fade.show.active
@@ -13,3 +15,7 @@
 				
 			div(id="formGroup" role="tabpanel" aria-labelledby="formGroup-tab").tab-pane.fade
 				include ../formData/formGroup
+			
+			div(id="formImage" role="tabpanel" aria-labelledby="formImage-tab").tab-pane.fade
+				p Картинки изделий
+				//- include ../formData/formGroup

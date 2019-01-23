@@ -1,0 +1,26 @@
+.container-fluid
+	.task-wrepper
+		.row
+			//- Nav pills
+			.col-xl-2.col-lg-3.col-md-3.col-sm-4
+				.block-wrepper
+					div(role="tablist", aria-orientation="vertical").nav.flex-column.nav-pills#v-pills-tab
+						a(data-toggle="pill", href="#v-pills-taskIn", role="tab", aria-controls="v-pills-taskIn", aria-selected="true").nav-link.active#v-pills-taskIn-tab <i class="fas fa-tasks"></i> Входящие задания
+						a(data-toggle="pill", href="#v-pills-taskOut", role="tab", aria-controls="v-pills-taskOut", aria-selected="false").nav-link#v-pills-taskOut-tab <i class="fas fa-tasks"></i> Исходящие задания
+						a(data-toggle="pill", href="#v-pills-taskDel", role="tab", aria-controls="v-pills-taskDel", aria-selected="false").nav-link#v-pills-taskDel-tab <i class="fas fa-trash-alt"></i> Удалённые
+
+			//- Tab panes
+			.col-xl-10.col-lg-9.col-md-9.col-sm-8
+				.block-wrepper
+					.tab-content#v-pills-tabContent
+						div(role="tabpanel", aria-labelledby="v-pills-taskIn-tab").tab-pane.fade.show.active#v-pills-taskIn
+							h1 Входящие задания
+							include ../formTasks/formTasksTable
+							include ../formTasks/formTasksForms
+							
+						div(role="tabpanel", aria-labelledby="v-pills-taskOut-tab").tab-pane.fade#v-pills-taskOut
+							h1 Исходящие задания
+							include ../formTasks/formTasksTable
+							
+						div(role="tabpanel", aria-labelledby="v-pills-taskDel-tab").tab-pane.fade#v-pills-taskDel
+							h1 Удалённые

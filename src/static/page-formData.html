@@ -38,7 +38,7 @@
             <div class="user"><i class="fas fa-user-alt"></i><i class="fas fa-caret-down"></i>
               <ul class="dropdown-menu">
                 <li><p class="user_name">user_name</p></li>
-                <li><a href="#">Задачи</a></li>
+                <li><a href="page-formTasks.html">Задачи</a></li>
                 <li><a href="page-formData.html">Форма данных</a></li>
                 <li><a href="#">Выйти</a></li>
               </ul>
@@ -90,14 +90,15 @@
         <div class="form-wrepper">
           <ul class="nav nav-tabs" id="formTab" role="tablist">
             <li class="nav-item"><a class="nav-link active" id="formProduct-tab" data-toggle="tab" href="#formProduct" role="tab" aria-controls="formProduct" aria-selected="true">Изделие</a></li>
-            <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группу</a></li>
+            <li class="nav-item"><a class="nav-link" id="formGroup-tab" data-toggle="tab" href="#formGroup" role="tab" aria-controls="formGroup" aria-selected="false">Группы</a></li>
+            <li class="nav-item"><a class="nav-link" id="formImage-tab" data-toggle="tab" href="#formImage" role="tab" aria-controls="formImage" aria-selected="false">Изображения</a></li>
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="formProduct" role="tabpanel" aria-labelledby="formProduct-tab">
               <div class="container-fluid formProduct">
                 <div class="row">
                   <div class="col-md-3">
-                    <fieldset class="form-group">
+                    <fieldset class="form-group form-wrepper-grey">
                       <legend>&ensp;Выбрать группу&ensp;</legend>
                       <label>Группа изделия</label>
                       <select class="custom-select" name="groupProduct">
@@ -114,7 +115,7 @@
                         <option value="3">Три корпус</option><br>
                       </select>
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group form-wrepper-grey">
                       <legend>&ensp;Новое изделие&ensp;</legend>
                       <label>Артикул</label>
                       <input class="form-control" type="text" readonly>
@@ -133,10 +134,37 @@
                     </fieldset>
                     <fieldset class="form-group">
                       <legend>&ensp;Изображения изделия&ensp;</legend>
-                      <div class="custom-file">
-                        <input class="custom-file-input" id="customFile" type="file" name="">
-                        <label class="custom-file-label" for="customFile"></label>
-                      </div><img class="img-prod" src="../img/placeholder_img.png" alt="Выберите изображение" border="2" style="display:none">
+                      <button class="btn btn-info" type="button" data-toggle="modal" data-target="#ModalImage">Загрузить изображение</button>
+                      <div class="modal fade" id="ModalImage" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Выбрать изображение</h5>
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt="изображение из базы"></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                  <div class="col-2"><img class="img-load" src="img/product_items/img1.png" alt=""></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                              <button class="btn btn-success" type="button">Загрузить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </fieldset>
                     <div class="btn_formProduct">
                       <button class="btn btn-secondary" type="button">Добавить</button>
@@ -161,7 +189,7 @@
                               <th scope="col" style="width: 11%">Масса (кг)</th>
                             </tr>
                           </thead>
-                          <tbody class="tb-zebra">
+                          <tbody>
                                           <tr class="tr_sel">
                                             <td>Данные</td>
                                             <td>Данные</td>
@@ -214,7 +242,7 @@
               <div class="container-fluid formGroup">
                 <div class="row">
                   <div class="col-md-3">
-                    <fieldset class="form-group">
+                    <fieldset class="form-group form-wrepper-grey">
                       <legend>&ensp;Новая группа:&ensp;</legend>
                       <label>Код</label>
                       <input class="form-control" type="number" name="code-group" value="1" min="0" max="100" step="1">
@@ -267,6 +295,9 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="tab-pane fade" id="formImage" role="tabpanel" aria-labelledby="formImage-tab">
+              <p>Картинки изделий</p>
             </div>
           </div>
         </div>

@@ -18,9 +18,9 @@ module.exports = function () {
 			}))
 			.pipe($.sourcemaps.write()) 						// создание sourcemaps
 			.pipe($.gulp.dest('build/css'))
-			.pipe($.browserSync.reload({
-				stream: true
-			}));
+			// .pipe($.browserSync.reload({
+			// 	stream: true
+			// }));
 	});
 
 	$.gulp.task('scss:dev', function () {

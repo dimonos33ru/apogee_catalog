@@ -88,6 +88,25 @@ body {
 .content {
 	min-height: calc(100vh - 537px);
 }
+
+// оболчка формы (белая)
+.form-wrepper {
+	background-color: #fff;
+}
+// оболчка формы (серая)
+.form-wrepper-grey {
+	background-color: #f7f7f7;
+}
+// оболчка формы (белая в рамке)
+.block-wrepper {
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid $divider-color;
+}
+
+label {
+	font-weight: 600;
+}
 // styles "Header"
 @import "fragments/header";
 @import "fragments/navigation";
@@ -96,6 +115,8 @@ body {
 @import "fragments/page-detail";
 @import "fragments/formList";
 @import "fragments/formRequest";
+@import "fragments/formTasks";
+@import "fragments/filterKollector";
 
 
 @import "fragments/footer";
